@@ -17,6 +17,7 @@ Making sure that `grid-base.styl` is available to your grid-calling Stylus file,
 * `grid-base()`
 * `grid-widths()` - e.g. `grid-widths('', 1 2 3)` sets up width modifiers such as `.one-half`
 * `grid-modifier()` - e.g. `grid-modifier('ten-pixel', 10px)` sets up modified-gutter grids
+* `grid-reversed()` - e.g. sets up a modified reversed grid (RTL)
 
 _N.B. Any settings should be included prior to your grid usage._
 
