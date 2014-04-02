@@ -1,13 +1,23 @@
+
+
+//
+// Settings
+//
+
 // Fallback variables
 $grid--gutter ?= 20px
 
 // The below markup fix is needed for uncompressed HTML
-$is-html-compressed ?= false
+$grid--html-compressed ?= false
 
 // Default grid names & count names
 $grid--count-names ?= one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
 $grid--size-names ?= whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth
 
+
+//
+// Base grid
+//
 
 grid-base($namespace = '', $grid-base--gutter = $grid--gutter)
   .grid{$namespace}
@@ -25,7 +35,7 @@ grid-base($namespace = '', $grid-base--gutter = $grid--gutter)
 
 
 //
-// GRID MODIFIERS
+// Grid modifiers
 //
 
 grid-modifier($modifier = '', $grid-modifier--gutter = $grid--gutter)
@@ -37,20 +47,24 @@ grid-modifier($modifier = '', $grid-modifier--gutter = $grid--gutter)
 
 
 //
-// GRID ITEM GUTTER
+// Grid reverse
+// ============
+// Reverses the rendered layout of the `grid__item`s
 //
 
-_grid-gutter--item($g)
-  if unit($g) == '%'
-    $scale = unit( 100 / (100 + $g), '')
-    padding-left ($scale * $g)%
-  else
-    padding-left $g
+grid-reverse($namespace='')
+  .{$namespace}--reversed
+    direction rtl
+    text-align right
+    > .grid__item
+      direction ltr
+      text-align left
 
 
 //
-// GRID WIDTHS
-// The base mixin, used to set up grid width styles.
+// Grid widths
+// ===========
+// Sets up grid width styles
 //
 
 grid-widths()
@@ -60,8 +74,10 @@ grid-widths()
 
 
 //
-// GRID WIDTHS BUILDER
-// This mixin should not be called directly
+// Internal mixins
+// ===============
+// These mixins should not be called directly,
+// instead are used as helpers within other mixins
 //
 
 _grid($namespace, $columns, $property)
@@ -78,3 +94,10 @@ _grid($namespace, $columns, $property)
     else
       .{$namespace}{$grid--count-names[0]}-{$grid[0]}
         {$property} 100%
+
+_grid-gutter--item($g)
+  if unit($g) == '%'
+    $scale = unit( 100 / (100 + $g), '')
+    padding-left ($scale * $g)%
+  else
+    padding-left $g
