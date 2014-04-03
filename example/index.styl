@@ -1,0 +1,39 @@
+// We must import grid-base.styl before anything
+// else, so this file has access to all mixins
+@import 'grid-base'
+
+
+// Set base variables
+$grid--gutter = 10em // Default gutter width between .grid__item's
+$grid--html-compressed = false // This is actually the default
+$grid--support-old-opera = false //
+
+
+// Setup base grid
+// ===============
+// .grid
+grid-base()
+
+
+// Setup grid widths
+// =================
+// .one-whole, .one-half, .one-third, .two-thirds
+grid-widths('', 1 2 3)
+
+
+// Setup a 10px-gutter grid
+// ========================
+// .grid--ten-pixel
+grid-modifier('ten-pixel', 10px)
+
+
+// Setup a 30%-gutter grid
+// =======================
+// .grid--expanded
+grid-modifier('expanded', 30%)
+
+
+// Setup the reversed grid
+// =======================
+// .grid--reversed
+grid-reversed()
