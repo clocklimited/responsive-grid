@@ -1,0 +1,260 @@
+// @describe grid-base()
+
+// @it output basic base
+grid-base()
+
+// @expect
+.grid {
+  margin-left: -20px;
+}
+.grid__item {
+  padding-left: 20px;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output basic base expecting uncompressed html
+$grid--html-uncompressed = true
+grid-base()
+
+// @expect
+.grid {
+  margin-left: -20px;
+  letter-spacing: -0.31em;
+}
+.grid__item {
+  padding-left: 20px;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+  letter-spacing: normal;
+}
+
+// @it output basic base with namespace
+grid-base('-namespace')
+
+// @expect
+.grid-namespace {
+  margin-left: -20px;
+}
+.grid__item {
+  padding-left: 20px;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+
+// @it output basic base gutter as em
+grid-base('', 1em)
+
+// @expect
+.grid {
+  margin-left: -1em;
+}
+.grid__item {
+  padding-left: 1em;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 10% and 9.1%
+grid-base('', 10%)
+
+// @expect
+.grid {
+  margin-left: -10%;
+}
+.grid__item {
+  padding-left: 9.09090909090909%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 20% and 16.6%
+grid-base('', 20%)
+
+// @expect
+.grid {
+  margin-left: -20%;
+}
+.grid__item {
+  padding-left: 16.666666666666668%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 30% and 23.1%
+grid-base('', 30%)
+
+// @expect
+.grid {
+  margin-left: -30%;
+}
+.grid__item {
+  padding-left: 23.076923076923077%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 40% and 28.6%
+grid-base('', 40%)
+
+// @expect
+.grid {
+  margin-left: -40%;
+}
+.grid__item {
+  padding-left: 28.571428571428573%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 50% and 33.3%
+grid-base('', 50%)
+
+// @expect
+.grid {
+  margin-left: -50%;
+}
+.grid__item {
+  padding-left: 33.33333333333333%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 60% and 37.5%
+grid-base('', 60%)
+
+// @expect
+.grid {
+  margin-left: -60%;
+}
+.grid__item {
+  padding-left: 37.5%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output 70% and 41.2%
+grid-base('', 70%)
+
+// @expect
+.grid {
+  margin-left: -70%;
+}
+.grid__item {
+  padding-left: 41.1764705882353%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+
+// @describe grid-modifier()
+
+// @it output basic base
+grid-modifier()
+
+// @expect
+.grid-- {
+  margin-left: -20px;
+}
+.grid-- > .grid__item {
+  padding-left: 20px;
+}
+
+// @it output basic base with modifier
+grid-modifier('modifier')
+
+// @expect
+.grid--modifier {
+  margin-left: -20px;
+}
+.grid--modifier > .grid__item {
+  padding-left: 20px;
+}
+
+// @it output basic base with modifier
+grid-modifier('modifier', 1em)
+
+// @expect
+.grid--modifier {
+  margin-left: -1em;
+}
+.grid--modifier > .grid__item {
+  padding-left: 1em;
+}
+
+// @it output basic base with modifier
+grid-modifier('modifier', 10%)
+
+// @expect
+.grid--modifier {
+  margin-left: -10%;
+}
+.grid--modifier > .grid__item {
+  padding-left: 9.09090909090909%;
+}
+
+// @describe grid-reverse()
+
+// @it output basic reverse
+grid-reverse()
+
+// @expect
+.grid--reversed {
+  direction: rtl;
+  text-align: right;
+}
+.grid--reversed > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
+// @describe grid-widths()
+
+// @it output grid widths
+grid-widths('', 1 2 3)
+
+// @expect
+.one-whole {
+  width: 100%;
+}
+.one-half {
+  width: 50%;
+}
+.one-third {
+  width: 33.333333333333336%;
+}
+.two-thirds {
+  width: 66.66666666666667%;
+}
+
+// @it output custom names for grid widths
+$grid--count-names = uno dos
+$grid--size-names = primero segundo tercero
+
+grid-widths('', 1 2 3)
+
+// @expect
+.uno-primero {
+  width: 100%;
+}
+.uno-segundo {
+  width: 50%;
+}
+.uno-tercero {
+  width: 33.333333333333336%;
+}
+.dos-terceros {
+  width: 66.66666666666667%;
+}
