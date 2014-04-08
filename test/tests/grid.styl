@@ -1,6 +1,6 @@
 // @describe grid-base()
 
-// @it output basic base
+// @it output base styles using fallback gutter
 grid-base()
 
 // @expect
@@ -14,8 +14,68 @@ grid-base()
   width: 100%;
 }
 
-// @it output basic base expecting uncompressed html
-$grid--html-uncompressed = true
+// @it output base styles when passed a gutter as px
+$grid--gutter = 10px
+grid-base()
+
+// @expect
+.grid {
+  margin-left: -10px;
+}
+.grid__item {
+  padding-left: 10px;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output base styles when passed a gutter as em
+$grid--gutter = 1em
+grid-base()
+
+// @expect
+.grid {
+  margin-left: -1em;
+}
+.grid__item {
+  padding-left: 1em;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output base styles when passed a gutter as %
+$grid--gutter = 10%
+grid-base()
+
+// @expect
+.grid {
+  margin-left: -10%;
+}
+.grid__item {
+  padding-left: 9.09090909090909%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it 20% gutter should give 16.6% padding to each grid item
+$grid--gutter = 20%
+grid-base()
+
+// @expect
+.grid {
+  margin-left: -20%;
+}
+.grid__item {
+  padding-left: 16.666666666666668%;
+  vertical-align: top;
+  display: inline-block;
+  width: 100%;
+}
+
+// @it output base styles expecting uncompressed html
+$grid--html-compressed = false
 grid-base()
 
 // @expect
@@ -31,183 +91,29 @@ grid-base()
   letter-spacing: normal;
 }
 
-// @it output basic base with namespace
-grid-base('-namespace')
-
-// @expect
-.grid-namespace {
-  margin-left: -20px;
-}
-.grid__item {
-  padding-left: 20px;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-
-// @it output basic base gutter as em
-grid-base('', 1em)
-
-// @expect
-.grid {
-  margin-left: -1em;
-}
-.grid__item {
-  padding-left: 1em;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 10% and 9.1%
-grid-base('', 10%)
-
-// @expect
-.grid {
-  margin-left: -10%;
-}
-.grid__item {
-  padding-left: 9.09090909090909%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 20% and 16.6%
-grid-base('', 20%)
-
-// @expect
-.grid {
-  margin-left: -20%;
-}
-.grid__item {
-  padding-left: 16.666666666666668%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 30% and 23.1%
-grid-base('', 30%)
-
-// @expect
-.grid {
-  margin-left: -30%;
-}
-.grid__item {
-  padding-left: 23.076923076923077%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 40% and 28.6%
-grid-base('', 40%)
-
-// @expect
-.grid {
-  margin-left: -40%;
-}
-.grid__item {
-  padding-left: 28.571428571428573%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 50% and 33.3%
-grid-base('', 50%)
-
-// @expect
-.grid {
-  margin-left: -50%;
-}
-.grid__item {
-  padding-left: 33.33333333333333%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 60% and 37.5%
-grid-base('', 60%)
-
-// @expect
-.grid {
-  margin-left: -60%;
-}
-.grid__item {
-  padding-left: 37.5%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-// @it output 70% and 41.2%
-grid-base('', 70%)
-
-// @expect
-.grid {
-  margin-left: -70%;
-}
-.grid__item {
-  padding-left: 41.1764705882353%;
-  vertical-align: top;
-  display: inline-block;
-  width: 100%;
-}
-
-
 // @describe grid-modifier()
 
-// @it output basic base
-grid-modifier()
+// @it output a grid modifier to allow for extra grids, with custom gutters
+grid-modifier('foo', 1em)
+grid-modifier('bar', 10%)
 
 // @expect
-.grid-- {
-  margin-left: -20px;
-}
-.grid-- > .grid__item {
-  padding-left: 20px;
-}
-
-// @it output basic base with modifier
-grid-modifier('modifier')
-
-// @expect
-.grid--modifier {
-  margin-left: -20px;
-}
-.grid--modifier > .grid__item {
-  padding-left: 20px;
-}
-
-// @it output basic base with modifier
-grid-modifier('modifier', 1em)
-
-// @expect
-.grid--modifier {
+.grid--foo {
   margin-left: -1em;
 }
-.grid--modifier > .grid__item {
+.grid--foo > .grid__item {
   padding-left: 1em;
 }
-
-// @it output basic base with modifier
-grid-modifier('modifier', 10%)
-
-// @expect
-.grid--modifier {
+.grid--bar {
   margin-left: -10%;
 }
-.grid--modifier > .grid__item {
+.grid--bar > .grid__item {
   padding-left: 9.09090909090909%;
 }
 
 // @describe grid-reverse()
 
-// @it output basic reverse
+// @it output styles to visually reverse grid item order
 grid-reverse()
 
 // @expect
@@ -222,26 +128,143 @@ grid-reverse()
 
 // @describe grid-widths()
 
-// @it output grid widths
-grid-widths('', 1 2 3)
+// @it output grid widths from whole width, through to sixteenths
+grid-widths('', 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16)
 
 // @expect
-.one-whole {
+.one-whole{width:100%}
+.one-half{width:50%}
+.one-third{width:33.333333333333336%}
+.two-thirds{width:66.66666666666667%}
+.one-quarter{width:25%}
+.two-quarters{width:50%}
+.three-quarters{width:75%}
+.one-fifth{width:20%}
+.two-fifths{width:40%}
+.three-fifths{width:60%}
+.four-fifths{width:80%}
+.one-sixth{width:16.666666666666668%}
+.two-sixths{width:33.333333333333336%}
+.three-sixths{width:50%}
+.four-sixths{width:66.66666666666667%}
+.five-sixths{width:83.33333333333334%}
+.one-seventh{width:14.285714285714286%}
+.two-sevenths{width:28.571428571428573%}
+.three-sevenths{width:42.85714285714286%}
+.four-sevenths{width:57.142857142857146%}
+.five-sevenths{width:71.42857142857143%}
+.six-sevenths{width:85.71428571428572%}
+.one-eighth{width:12.5%}
+.two-eighths{width:25%}
+.three-eighths{width:37.5%}
+.four-eighths{width:50%}
+.five-eighths{width:62.5%}
+.six-eighths{width:75%}
+.seven-eighths{width:87.5%}
+.one-ninth{width:11.11111111111111%}
+.two-ninths{width:22.22222222222222%}
+.three-ninths{width:33.33333333333333%}
+.four-ninths{width:44.44444444444444%}
+.five-ninths{width:55.55555555555556%}
+.six-ninths{width:66.66666666666666%}
+.seven-ninths{width:77.77777777777777%}
+.eight-ninths{width:88.88888888888889%}
+.one-tenth{width:10%}
+.two-tenths{width:20%}
+.three-tenths{width:30%}
+.four-tenths{width:40%}
+.five-tenths{width:50%}
+.six-tenths{width:60%}
+.seven-tenths{width:70%}
+.eight-tenths{width:80%}
+.nine-tenths{width:90%}
+.one-eleventh{width:9.090909090909092%}
+.two-elevenths{width:18.181818181818183%}
+.three-elevenths{width:27.272727272727273%}
+.four-elevenths{width:36.36363636363637%}
+.five-elevenths{width:45.45454545454546%}
+.six-elevenths{width:54.54545454545455%}
+.seven-elevenths{width:63.63636363636364%}
+.eight-elevenths{width:72.72727272727273%}
+.nine-elevenths{width:81.81818181818183%}
+.ten-elevenths{width:90.90909090909092%}
+.one-twelfth{width:8.333333333333334%}
+.two-twelfths{width:16.666666666666668%}
+.three-twelfths{width:25%}
+.four-twelfths{width:33.333333333333336%}
+.five-twelfths{width:41.66666666666667%}
+.six-twelfths{width:50%}
+.seven-twelfths{width:58.333333333333336%}
+.eight-twelfths{width:66.66666666666667%}
+.nine-twelfths{width:75%}
+.ten-twelfths{width:83.33333333333334%}
+.eleven-twelfths{width:91.66666666666667%}
+.one-thirteenth{width:7.6923076923076925%}
+.two-thirteenths{width:15.384615384615385%}
+.three-thirteenths{width:23.076923076923077%}
+.four-thirteenths{width:30.76923076923077%}
+.five-thirteenths{width:38.46153846153846%}
+.six-thirteenths{width:46.15384615384615%}
+.seven-thirteenths{width:53.84615384615385%}
+.eight-thirteenths{width:61.53846153846154%}
+.nine-thirteenths{width:69.23076923076923%}
+.ten-thirteenths{width:76.92307692307692%}
+.eleven-thirteenths{width:84.61538461538461%}
+.twelve-thirteenths{width:92.3076923076923%}
+.one-fourteenth{width:7.142857142857143%}
+.two-fourteenths{width:14.285714285714286%}
+.three-fourteenths{width:21.42857142857143%}
+.four-fourteenths{width:28.571428571428573%}
+.five-fourteenths{width:35.714285714285715%}
+.six-fourteenths{width:42.85714285714286%}
+.seven-fourteenths{width:50%}
+.eight-fourteenths{width:57.142857142857146%}
+.nine-fourteenths{width:64.28571428571429%}
+.ten-fourteenths{width:71.42857142857143%}
+.eleven-fourteenths{width:78.57142857142857%}
+.twelve-fourteenths{width:85.71428571428572%}
+.thirteen-fourteenths{width:92.85714285714286%}
+.one-fifteenth{width:6.666666666666667%}
+.two-fifteenths{width:13.333333333333334%}
+.three-fifteenths{width:20%}
+.four-fifteenths{width:26.666666666666668%}
+.five-fifteenths{width:33.333333333333336%}
+.six-fifteenths{width:40%}
+.seven-fifteenths{width:46.66666666666667%}
+.eight-fifteenths{width:53.333333333333336%}
+.nine-fifteenths{width:60%}
+.ten-fifteenths{width:66.66666666666667%}
+.eleven-fifteenths{width:73.33333333333334%}
+.twelve-fifteenths{width:80%}
+.thirteen-fifteenths{width:86.66666666666667%}
+.fourteen-fifteenths{width:93.33333333333334%}
+.one-sixteenth{width:6.25%}
+.two-sixteenths{width:12.5%}
+.three-sixteenths{width:18.75%}
+.four-sixteenths{width:25%}
+.five-sixteenths{width:31.25%}
+.six-sixteenths{width:37.5%}
+.seven-sixteenths{width:43.75%}
+.eight-sixteenths{width:50%}
+.nine-sixteenths{width:56.25%}
+.ten-sixteenths{width:62.5%}
+.eleven-sixteenths{width:68.75%}
+.twelve-sixteenths{width:75%}
+.thirteen-sixteenths{width:81.25%}
+.fourteen-sixteenths{width:87.5%}
+.fifteen-sixteenths{width:93.75%}
+
+// @it output grid widths, prefixed with modifiers
+grid-widths('desktop-', 1)
+
+// @expect
+.desktop-one-whole {
   width: 100%;
 }
-.one-half {
-  width: 50%;
-}
-.one-third {
-  width: 33.333333333333336%;
-}
-.two-thirds {
-  width: 66.66666666666667%;
-}
 
-// @it output custom names for grid widths
-$grid--count-names = uno dos
-$grid--size-names = primero segundo tercero
+// @it output custom names for grid widths to allow for i18n
+$grid--count-names = uno dos tres
+$grid--fraction-names = primero segundo tercero
 
 grid-widths('', 1 2 3)
 
