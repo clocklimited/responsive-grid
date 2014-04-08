@@ -26,4 +26,4 @@ _N.B. Any settings should be included prior to your grid usage._
 ## Extra settings
 The below can be overriden should you wish to add more than sixteenths to your grid:
 * $grid--count-names
-* $grid--size-names
+* $grid--fraction-names
