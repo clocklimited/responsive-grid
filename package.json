@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "Stylus Grid System",
   "main": "lib/grid.js",
-  "author": "Tim Gleeson",
+  "author": "@clocklimited",
   "repository": {
     "type": "git",
     "url": "git://github.com:jackbrewer/stylus-mixins.git"
