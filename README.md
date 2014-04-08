@@ -1,5 +1,7 @@
+[![Build Status](https://travis-ci.org/clocklimited/ResponsiveGrid.svg?branch=master)](https://travis-ci.org/clocklimited/ResponsiveGrid)
+
 # ResponsiveGrid
-================
+
 A Stylus grid system. Fully responsive, modifiers available with full browser support.
 
 You can find a full working example in the _example_ directory.
