@@ -11,7 +11,7 @@ Below lists the settings available to the grid system (bold denotes a required v
 
 Variable name           | Type    | Default | Description
 ----------------------- | ------- | ------- | -----------
-*$grid-html-compressed* | boolean | false   | If HTML is compressed, the whitespace hack used will be redundant.
+$grid--html-compressed  | boolean | false   | If HTML is compressed, the whitespace hack used will be redundant.
 $grid--gutter           | unit    | 20px    | Can be any the following unit types: **em**, **%**, **px**
 
 ## Usage
