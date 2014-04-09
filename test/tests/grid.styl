@@ -262,6 +262,19 @@ grid-widths('desktop-', 1)
   width: 100%;
 }
 
+// @it output grid widths for IE7
+
+grid-widths-ie7('', 1 2)
+
+// @expect
+.one-whole {
+  width: expression((this.parentNode.clientWidth * 1 - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")
+}
+
+.one-half {
+  width: expression((this.parentNode.clientWidth * 0.5 - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")
+}
+
 // @it output custom names for grid widths to allow for i18n
 $grid--count-names = uno dos tres
 $grid--fraction-names = primero segundo tercero
