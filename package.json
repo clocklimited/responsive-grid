@@ -1,6 +1,6 @@
 {
   "name": "responsive-grid",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Responsive grid system, built in Stylus",
   "main": "lib/grid.js",
   "author": "http://github.com/clocklimited",
@@ -12,6 +12,6 @@
     "test": "node test/test-runner.js"
   },
   "devDependencies": {
-    "stylus-test-runner":  "~0.1.0"
+    "stylus-test-runner": "~0.1.0"
   }
 }
