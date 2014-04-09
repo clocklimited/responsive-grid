@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/clocklimited/ResponsiveGrid.svg?branch=master)](https://travis-ci.org/clocklimited/ResponsiveGrid)
+[![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
 
 # ResponsiveGrid
 
