@@ -1,12 +1,12 @@
 {
-  "name": "stylus-grid",
-  "version": "0.0.1",
-  "description": "Stylus Grid System",
+  "name": "responsive-grid",
+  "version": "0.0.0",
+  "description": "Responsive grid system, built in Stylus",
   "main": "lib/grid.js",
-  "author": "@clocklimited",
+  "author": "http://github.com/clocklimited",
   "repository": {
     "type": "git",
-    "url": "git://github.com:jackbrewer/stylus-mixins.git"
+    "url": "git://github.com:clocklimited/responsive-grid.git"
   },
   "scripts": {
     "test": "node test/test-runner.js"
