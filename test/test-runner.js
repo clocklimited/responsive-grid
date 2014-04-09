@@ -1,8 +1,8 @@
 var testRunnerConfig = {
-  describe: 'Stylus Mixins',
+  describe: 'Responsive Grid',
   testDirPath: './test',
   stylus: {
-    use: require('../lib/grid')(),
+    use: require('../lib/responsive-grid')(),
     import: '../index.styl'
   }
 }
