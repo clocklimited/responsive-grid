@@ -1,6 +1,6 @@
 {
   "name": "responsive-grid",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Responsive grid system, built in Stylus",
   "main": "lib/responsive-grid.js",
   "author": "http://github.com/clocklimited",
