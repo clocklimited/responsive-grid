@@ -2,9 +2,11 @@
 
 A Stylus grid system. Fully responsive, modifiers available with full browser support.
 
-You can find a full working example in the _example_ directory.
+* [Installation](#installation)
+* [Usage](#usage)
+* [Settings](#settings)
 
-## Installing
+## Installation
 
 ### NPM
 
@@ -46,6 +48,8 @@ To gain access the responsive-grid mixins, simply add:
 ## Usage
 
 Responsive Grid provides 5 mixins for use. These mixins can be used straight away without any modification to the settings.
+
+Full working examples of all the mixins below can be found in [this codepen](http://codepen.io/timjgleeson/full/KfBsc).
 
 ### `grid-base()`
 
