@@ -11,7 +11,7 @@ You can find a full working example in the _example_ directory.
 Responsive Grid is on NPM.
 
 ```
-npm i responsive-grid
+npm install responsive-grid
 ```
 
 ### Javascript API
@@ -51,6 +51,8 @@ Responsive Grid provides 5 mixins for use. These mixins can be used straight awa
 
 This will set up the block `.grid` class and the element `.grid__item` class.
 
+---
+
 ### `grid-widths($namespace, $columns)`
 
 This will set up width classes based on the `$columns` you include.
@@ -60,9 +62,13 @@ This will set up width classes based on the `$columns` you include.
 * `grid-widths('', 1 3 6)` will set up a whole class, thirds classes, and sixths classes.
 * `grid-widths('desk', 1 2 3)` will set up a `.{$namespace}` class each of the width classes.
 
+---
+
 ### `grid-widths-ie7($namespace, $columns)`
 
 This will set up the same classes as above, however, will use expressions for the width. This is to provide support for IE7 and below.
+
+---
 
 ### `grid-modifier($namespace, $gutter)`
 
@@ -74,10 +80,13 @@ This will set up the modifier `.{$namespace}grid` class and `.grid__item` childr
 * `grid-modified('percent', 10%)` will set up a `.{$namespace}grid` class that will provided 10% gutter between each `.grid__item`.
 * `grid-modified('pixel', 20px)` will set up a `.{$namespace}grid` class that will provided 20px gutter between each `.grid__item`.
 
+---
+
 ### `grid-reversed()`
 
 This will set up modifier `.{$namespace}grid` class that, when applied, will visual reverse the DOM order of the `.grid__item`'s.
 
+---
 
 ## Settings
 Below lists the settings available to the grid system (bold denotes a required variable):
