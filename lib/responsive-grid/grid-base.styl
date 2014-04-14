@@ -78,6 +78,31 @@ grid-widths($namespace, $columns)
 
 
 //
+// GRID PULL
+// Sets up grid pull styles
+//
+
+grid-pull($namespace, $columns)
+  $namespace = $namespace + 'pull-'
+
+  [class*={$namespace}]
+    position relative
+  _grid($namespace, $columns, 'left')
+
+
+//
+// GRID PUSH
+// Sets up grid push styles
+//
+
+grid-push($namespace, $columns)
+  $namespace = $namespace + 'push-'
+  [class*={$namespace}]
+    position relative
+  _grid($namespace, $columns, 'right')
+
+
+//
 // IE7 SUPPORT
 // Enables support for IE7 using expressions
 
