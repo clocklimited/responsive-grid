@@ -13,7 +13,7 @@ A Stylus grid system. Fully responsive, modifiers available with full browser su
 Responsive Grid is on NPM.
 
 ```
-npm install responsive-grid
+npm install -g responsive-grid stylus
 ```
 
 ### Javascript API
@@ -21,21 +21,10 @@ npm install responsive-grid
 Below is an example of how to utilise responsive-grid and stylus.
 
 ```
-var stylus = require('stylus')
-  , responsiveGrid = require('responsive-grid');
-
-function compile(str, path) {
-  return stylus(str)
-    .set('filename', path)
-    .set('compress', true)
-    .use(responsiveGrid());
-}
-
-stylus.middleware({
-    src: __dirname
-  , compile: compile
-})
+stylus -w -u responsive-grid stylus/index.styl -o css/
 ```
+
+For more information on the many ways you can use Stylus plugins, please refer to [this guide](https://gist.github.com/timjgleeson/10641220).
 
 ### Stylus API
 
