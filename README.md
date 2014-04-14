@@ -16,7 +16,7 @@ Responsive Grid is on NPM.
 npm install -g responsive-grid stylus
 ```
 
-### Javascript API
+### Executable
 
 Below is an example of how to utilise responsive-grid and stylus.
 
