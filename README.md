@@ -1,6 +1,4 @@
-# Responsive Grid
-
-[![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
+# Responsive Grid [![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
 
 A Stylus grid system. Fully responsive, modifiers available with full browser support.
 
@@ -18,14 +16,11 @@ npm i responsive-grid
 
 ### Javascript API
 
-Below is an example of how to utilize nib and stylus with the connect framework (or express).
+Below is an example of how to utilise responsive-grid and stylus.
 
 ```
-var connect = require('connect')
-  , stylus = require('stylus')
+var stylus = require('stylus')
   , responsiveGrid = require('responsive-grid');
-
-var server = connect();
 
 function compile(str, path) {
   return stylus(str)
@@ -34,15 +29,15 @@ function compile(str, path) {
     .use(responsiveGrid());
 }
 
-server.use(stylus.middleware({
+stylus.middleware({
     src: __dirname
   , compile: compile
-}));
+})
 ```
 
 ### Stylus API
 
-To gain access to everything nib has to offer, simply add:
+To gain access the responsive-grid mixins, simply add:
 
 ```
 @import 'responsive-grid'
