@@ -1,4 +1,6 @@
-# Responsive Grid [![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
+# Responsive Grid
+
+[![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
 
 A Stylus grid system. Fully responsive, modifiers available with full browser support.
 
@@ -6,7 +8,7 @@ You can find a full working example in the _example_ directory.
 
 ## Installing
 
-## NPM
+### NPM
 
 Responsive Grid is on NPM.
 
