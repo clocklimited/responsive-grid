@@ -1,6 +1,6 @@
 # Responsive Grid [![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
 
-A Stylus grid system. Fully responsive, modifiers available with full browser support.
+A Stylus Plugin that provides a simple grid system. It's fully responsive, with modifiers available that provide full browser support.
 
 * [Installation](#installation)
 * [Usage](#usage)
