@@ -16,12 +16,13 @@ $grid--gutter ?= 20px
 
 // The below markup fix is needed for uncompressed HTML
 $grid--html-compressed ?= true
-$grid--width-ie7 ?= false
 
 // Default count & fraction names
 $grid--count-names ?= one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
 $grid--fraction-names ?= whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth
 
+// Set to true if you need expression based widths - useful for IE7 and below
+$grid--width-expression ?= false
 
 //
 // BASE GRID
@@ -92,7 +93,7 @@ _grid($namespace, $columns, $property)
       $plural = $j is 1 ? '' : 's'
       $width = $j * (100 / $column)
       .{$namespace}{$grid--count-names[$j - 1]}-{$grid}{$plural}
-        {$property} !$grid--width-ie7 ? ($width)% : _width-ie7($width)
+        {$property} !$grid--width-expression ? ($width)% : _grid-width--expression($width)
 
 _grid-gutter--item($g)
   if unit($g) == '%'
@@ -101,5 +102,5 @@ _grid-gutter--item($g)
   else
     padding-left $g
 
-_width-ie7($width)
+_grid-width--expression($width)
   unquote('expression((this.parentNode.clientWidth * '+($width / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")')
