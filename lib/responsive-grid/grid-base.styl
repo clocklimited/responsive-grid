@@ -65,6 +65,7 @@ grid-reverse()
   .grid--reversed
     direction rtl
     text-align right
+
     > .grid__item
       direction ltr
       text-align left
@@ -77,6 +78,34 @@ grid-reverse()
 
 grid-widths($namespace, $columns)
   _grid($namespace, $columns, 'width')
+
+
+//
+// GRID PULL
+// Sets up grid pull styles
+//
+
+grid-pull($namespace, $columns)
+  $namespace = $namespace + 'pull-'
+
+  [class*={$namespace}]
+    position relative
+
+  _grid($namespace, $columns, 'left')
+
+
+//
+// GRID PUSH
+// Sets up grid push styles
+//
+
+grid-push($namespace, $columns)
+  $namespace = $namespace + 'push-'
+
+  [class*={$namespace}]
+    position relative
+
+  _grid($namespace, $columns, 'right')
 
 
 //
