@@ -13,6 +13,7 @@ Variable name           | Type    | Default | Description
 ----------------------- | ------- | ------- | -----------
 $grid--html-compressed  | boolean | false   | If HTML is compressed, the whitespace hack used will be redundant.
 $grid--gutter           | unit    | 20px    | Can be any the following unit types: **em**, **%**, **px**
+$grid--width-expression | boolean | false   | Changes the width in the grid widths to use expressions. Set to true for IE7 and below.
 
 ## Usage
 Making sure that `grid-base.styl` is available to your grid-calling Stylus file, you can use any of the following:

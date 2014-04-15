@@ -21,6 +21,8 @@ $grid--html-compressed ?= true
 $grid--count-names ?= one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen
 $grid--fraction-names ?= whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth
 
+// Set to true if you need expression based widths - useful for IE7 and below
+$grid--width-expression ?= false
 
 //
 // BASE GRID
@@ -107,23 +109,12 @@ grid-push($namespace, $columns)
 
 
 //
-// IE7 SUPPORT
-// Enables support for IE7 using expressions
-
-grid-widths-ie7($namespace, $columns)
-  _grid($namespace, $columns, 'width', true)
-
-width-ie7($width)
-  unquote('expression((this.parentNode.clientWidth * '+($width / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")')
-
-
-//
 // INTERNAL MIXINS
 // These mixins should not be called directly,
 // instead are used as helpers within other mixins
 //
 
-_grid($namespace, $columns, $property, ie7=false)
+_grid($namespace, $columns, $property)
   for $column, $i in $columns
     $grid = $grid--fraction-names[$column - 1]
     $numCols = $column is 1 ? 1 : $column - 1
@@ -131,7 +122,7 @@ _grid($namespace, $columns, $property, ie7=false)
       $plural = $j is 1 ? '' : 's'
       $width = $j * (100 / $column)
       .{$namespace}{$grid--count-names[$j - 1]}-{$grid}{$plural}
-        {$property} !ie7 ? ($width)% : width-ie7($width)
+        {$property} !$grid--width-expression ? ($width)% : _grid-width--expression($width)
 
 _grid-gutter--item($g)
   if unit($g) == '%'
@@ -139,3 +130,6 @@ _grid-gutter--item($g)
     padding-left ($scale * $g)%
   else
     padding-left $g
+
+_grid-width--expression($width)
+  unquote('expression((this.parentNode.clientWidth * '+($width / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")')
