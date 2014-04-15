@@ -63,6 +63,7 @@ grid-reverse()
   .grid--reversed
     direction rtl
     text-align right
+
     > .grid__item
       direction ltr
       text-align left
@@ -87,6 +88,7 @@ grid-pull($namespace, $columns)
 
   [class*={$namespace}]
     position relative
+
   _grid($namespace, $columns, 'left')
 
 
@@ -97,8 +99,10 @@ grid-pull($namespace, $columns)
 
 grid-push($namespace, $columns)
   $namespace = $namespace + 'push-'
+
   [class*={$namespace}]
     position relative
+
   _grid($namespace, $columns, 'right')
 
 
