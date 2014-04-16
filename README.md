@@ -57,9 +57,25 @@ This will set up width classes based on the `$columns` you include.
 
 ---
 
-### `grid-widths-ie7($namespace, $columns)`
+### `grid-pull($namespace, $columns)`
 
-This will set up the same classes as above, however, will use expressions for the width. This is to provide support for IE7 and below.
+This will set up pull classes based on the `$columns` you include.
+
+#### Examples
+
+* `grid-pull('', 1 3 6)` will set up `.pull-{width}` classes that move the `.grid__item` with a whole class, thirds classes, and sixths classes.
+* `grid-pull('desk', 1 2 3)` will set up a `.{$namespace}pull-{width}` class each of the pull classes.
+
+---
+
+### `grid-push($namespace, $columns)`
+
+This will set up push classes based on the `$columns` you include.
+
+#### Examples
+
+* `grid-push('', 1 3 6)` will set up `.push-{width}` classes that move the `.grid__item` with a whole class, thirds classes, and sixths classes.
+* `grid-push('desk', 1 2 3)` will set up a `.{$namespace}push-{width}` class each of the push classes.
 
 ---
 
@@ -89,6 +105,5 @@ Variable name           | Type    | Default | Description
 $grid--html-compressed  | boolean | false   | If HTML is compressed, the whitespace hack used will be redundant.
 $grid--gutter           | unit    | 20px    | Can be any the following unit types: **em**, **%**, **px**
 $grid--count-names      | array   | one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen | Forms the first half of the class name of the grid widths
-$grid--fraction-names   | boolean | whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth | Forms the second half of the class name of the grid widths
-
-_N.B. Any settings should be included prior to your grid usage._
+$grid--fraction-names   | array | whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth | Forms the second half of the class name of the grid widths
+$grid--width-expression | boolean | false   | Changes the width in the grid widths to use expressions. Set to true for IE7 and below.

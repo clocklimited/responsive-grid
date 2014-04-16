@@ -269,8 +269,8 @@ grid-widths('desktop-', 1)
 }
 
 // @it output grid widths for IE7
-
-grid-widths-ie7('', 1 2)
+$grid--width-expression = true
+grid-widths('', 1 2)
 
 // @expect
 .one-whole {
@@ -299,4 +299,105 @@ grid-widths('', 1 2 3)
 }
 .dos-terceros {
   width: 66.66666666666667%;
+}
+
+// @describe grid-pull()
+
+// @it output grid widths from whole width, through to sixteenths
+grid-pull('', 1 2)
+
+// @expect
+[class*='pull-'] {
+  position: relative;
+}
+.pull-one-whole{
+  left: 100%;
+}
+.pull-one-half{
+  left: 50%;
+}
+
+// @it output grid widths, prefixed with modifiers
+grid-pull('desktop-', 1)
+
+// @expect
+[class*='desktop-pull-'] {
+  position: relative;
+}
+.desktop-pull-one-whole {
+  left: 100%;
+}
+
+// @it output custom names for grid widths to allow for i18n
+$grid--count-names = uno dos tres
+$grid--fraction-names = primero segundo tercero
+
+grid-pull('', 1 2 3)
+
+// @expect
+[class*='pull-'] {
+  position: relative;
+}
+.pull-uno-primero {
+  left: 100%;
+}
+.pull-uno-segundo {
+  left: 50%;
+}
+.pull-uno-tercero {
+  left: 33.333333333333336%;
+}
+.pull-dos-terceros {
+  left: 66.66666666666667%;
+}
+
+
+// @describe grid-push()
+
+// @it output grid widths from whole width, through to sixteenths
+grid-push('', 1 2)
+
+// @expect
+[class*='push-'] {
+  position: relative;
+}
+.push-one-whole{
+  right: 100%;
+}
+.push-one-half{
+  right: 50%;
+}
+
+// @it output grid widths, prefixed with modifiers
+grid-push('desktop-', 1)
+
+// @expect
+[class*='desktop-push-'] {
+  position: relative;
+}
+.desktop-push-one-whole {
+  right: 100%;
+}
+
+// @it output custom names for grid widths to allow for i18n
+$grid--count-names = uno dos tres
+$grid--fraction-names = primero segundo tercero
+
+grid-push('', 1 2 3)
+
+// @expect
+[class*='push-'] {
+  position: relative;
+}
+.push-uno-primero {
+  right: 100%;
+}
+.push-uno-segundo {
+  right: 50%;
+}
+.push-uno-tercero {
+  right: 33.333333333333336%;
+}
+.push-dos-terceros {
+  right: 66.66666666666667%;
 }
