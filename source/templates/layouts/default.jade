@@ -1,0 +1,24 @@
+include ../components/head
+
+body#top.open(class=((bodyClass !== 'undefined') ? bodyClass : ''))
+
+  .container
+    include ../components/main-header
+
+    header.page-header
+      .centering
+        h1= title
+
+    .page-content
+
+      block content
+
+
+    include ../components/main-footer
+
+  .mobile-sidebar
+    .h1.site-title
+      a(href='/') Dev Guides
+    include ../components/main-navigation
+
+  include ../components/scripts

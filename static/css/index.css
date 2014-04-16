@@ -845,11 +845,11 @@ td.title strong {
   height: 5px;
   background-position: -100% -100%;
   background-repeat: no-repeat;
-  background-image: versionPath("/admin/images/content/sprite.png");
+  background-image: url(/admin/images/content/sprite.png);
 }
 .svg .table-sortable .sort-asc a:after,
 .svg .table-sortable .sort-desc a:after {
-  background-image: versionPath("/admin/images/content/sprite.svg");
+  background-image: url(/admin/images/content/sprite.svg);
 }
 .table-sortable .sort-asc a:after {
   background-position: -112px 0;
@@ -1166,7 +1166,7 @@ pre[class*="language-"] {
 .token.prolog,
 .token.doctype,
 .token.cdata {
-  color: #708090;
+  color: #778090;
 }
 .token.punctuation {
   color: #999;

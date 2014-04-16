@@ -1,0 +1,30 @@
+[ { "route": "/"
+  , "template": "index"
+  , "data":
+    { "bodyClass": "section"
+    , "title": "Responsive Grid"
+    , "section": "home"
+    }
+  }
+, { "template": "usage/basic"
+  , "data":
+    { "bodyClass": "section"
+    , "title": "Basic Usage"
+    , "section": "usage"
+    }
+  }
+, { "template": "usage/modifiers"
+  , "data":
+    { "bodyClass": "section"
+    , "title": "Modifiers Usage"
+    , "section": "usage"
+    }
+  }
+, { "template": "usage/reverse"
+  , "data":
+    { "bodyClass": "section"
+    , "title": "Reverse Usage"
+    , "section": "usage"
+    }
+  }
+]

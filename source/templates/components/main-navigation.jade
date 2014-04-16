@@ -1,0 +1,10 @@
+nav.main-navigation
+
+  ul.nav-list
+
+    li.section-html
+      a(href='/responsive-grid', class=((section === 'home') ? 'active' : null)) Introduction
+
+    li.section-css.has-subnav
+      a(href='/responsive-grid/usage/basic', class=((section === 'usage') ? 'active' : null)) Usage
+      include subnav/usage

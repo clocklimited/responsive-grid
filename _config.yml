@@ -1,0 +1,1 @@
+exclude: ./defaults, ./lib, ./pliers, ./source, ./app.js, ./config.json, ./readme.md, ./package.json, ./pliers.js, ./properties.js, ./server.js

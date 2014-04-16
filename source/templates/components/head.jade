@@ -1,0 +1,32 @@
+doctype
+html.js(lang='en')
+  head
+
+    meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+    meta(charset='utf-8')
+
+    if(typeof isHome !== 'undefined' && isHome)
+      title Dev Guides – Front end documentation
+    else
+      title #{title} / Dev Guides
+
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    meta(name='author', content='Jack Brewer')
+
+    //- Modernizr should only be used when needed. Be sure to only include the modules you are testing for
+    //- script(src='resource/js/modernizr-2.6.1.min.js')
+
+    link(rel='stylesheet', href='/responsive-grid/static/css/index.css')
+
+    //- External CSS files, such as webfonts
+    link(rel='stylesheet', href='http://fonts.googleapis.com/css?family=Lato:100,400,900|Droid+Serif:400,700,400italic')
+
+    //- A favicon.ico file, containing both 16px and 32px variations
+    link(rel='shortcut icon', href='/responsive-grid/static/images/meta/favicon-#{section}.ico')
+
+    //- Apple Specific Meta Tags
+    meta(name='viewport', content='initial-scale=1.0, maximum-scale=1.0')
+    meta(name='apple-mobile-web-app-capable', content='yes')
+    meta(name='apple-mobile-web-app-status-bar-style', content='black')
+    meta(name='apple-mobile-web-app-title', content='My App')

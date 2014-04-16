@@ -1,0 +1,50 @@
+{ "components":
+  [ "layouts/default"
+  ]
+, "pages":
+  [ { "template": "index"
+    , "data":
+      { "bodyClass": "section-default page-homepage"
+      , "section": "default"
+      , "title": "Dev Guides"
+      , "isHome": true
+      }
+    }
+  , { "template": "usage-basic"
+    , "data":
+      { "bodyClass": "section-default page-homepage"
+      , "section": "default"
+      , "title": "Dev Guides"
+      , "isHome": true
+      }
+    }
+  , { "template": "usage-modifiers"
+    , "data":
+      { "bodyClass": "section-default page-homepage"
+      , "section": "default"
+      , "title": "Dev Guides"
+      , "isHome": true
+      }
+    }
+  , { "template": "usage-reverse"
+    , "data":
+      { "bodyClass": "section-default page-homepage"
+      , "section": "default"
+      , "title": "Dev Guides"
+      , "isHome": true
+      }
+    }
+  ]
+, "stylesheets":
+  [ "index"
+  ]
+, "routes":
+  { "/": "index"
+  , "/usage-basic": "usage-basic"
+  , "/usage-modifiers": "usage-modifiers"
+  , "/usage-reverse": "usage-reverse"
+  }
+  , "compressCSS": true
+  , "stylusLinenos": false
+  , "port": 8100
+}
