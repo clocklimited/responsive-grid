@@ -1,0 +1,40 @@
+//
+// MAIN HEADER
+// ===========
+//
+
+.main-header
+  z-index 10
+  position relative
+  text-align right
+  // background-color darken($pageBgColor, 20%)
+  background-color #222
+
+  .centering
+    position relative
+
+  @media $b700
+    position fixed
+    top 0
+    left 0
+    width 100%
+
+.site-title
+  float left
+  margin-bottom 0
+  // margin-left -1em
+  font-size 1em
+
+  a
+  button
+    line-height 1.4
+    font-weight 400
+    padding 0.5em 1em
+    color #fff
+    display block
+    white-space nowrap
+
+    &:hover
+      // background-color darken($pageBgColor, 40%)
+      background-color #555
+      text-decoration none

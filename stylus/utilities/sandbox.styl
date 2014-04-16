@@ -1,0 +1,234 @@
+//
+// SANDBOX
+// =======
+// Nothing should ever find a home in this file.
+// It is a temporary home for prototyping styles only.
+//
+
+.panel
+  color #fff
+  margin-bottom 1.5em
+  &.section-html
+    background-color $sectionHTML
+  &.section-css
+    background-color $sectionCSS
+  &.section-javascript
+    background-color $sectionJavascript
+  &.section-documents
+    background-color $sectionDocuments
+.panel-header
+  padding 1em
+  h2
+    margin-bottom 0
+    a
+      color #fff
+  .section-html &
+    background-color $sectionHTMLDark
+  .section-css &
+    background-color $sectionCSSDark
+  .section-javascript &
+    background-color $sectionJavascriptDark
+  .section-documents &
+    background-color $sectionDocumentsDark
+.panel-content
+  padding 1em 1em 1px
+  a
+    color #fff
+
+
+.page-content
+  .section
+    padding 1.5em 0 0
+    @media $b700
+      padding 3em 0 1.5em
+  .section:nth-child(even)
+    background-color $colorBodyBgDark
+
+
+body
+  counter-reset ref-link ref-list
+
+.reference-link
+  &:before
+    counter-increment ref-link
+    content '[' counter(ref-link) ']'
+
+.section-references
+  ul
+    font-size 0.8em
+  li
+    list-style none
+    &:before
+      counter-increment ref-list
+      content '[' counter(ref-list) '] '
+
+// #nav ul
+//   margin 0
+//   padding 0
+//   width 100%
+//   display block
+//   list-style none
+
+
+// #nav li
+//   width 100%
+//   display block
+
+
+// .js #nav
+//   clip rect(0 0 0 0)
+//   max-height 0
+//   position absolute
+//   display block
+//   overflow hidden
+//   zoom 1
+
+
+// #nav.opened
+//   max-height 9999px
+
+
+// @media $b700
+
+//   .js #nav
+//     position relative
+//     max-height none
+
+//   #nav-toggle
+//     display none
+
+
+
+
+// html
+// body
+// .wrapperz
+//   height 100%
+//   max-height 100%
+//   overflow hidden
+
+// .main-header
+// .page-header
+//   position absolute
+
+// .wrapperz
+//   position relative
+//   z-index 2
+//   overflow-x hidden
+//   overflow-y scroll
+//   -webkit-overflow-scrolling touch
+
+
+
+
+
+
+
+
+
+
+.section
+  position relative
+.hash-link
+  position absolute
+  top 0
+  right 0
+  font-size 1.6em
+  line-height 1
+  text-indent 110%
+  white-space nowrap
+  overflow hidden
+  display block
+  width 1em
+  height 1em
+  background-image url("/resource/images/sprite.png")
+  background-position 0px 0px
+  background-repeat no-repeat
+  background-size 100% auto
+  .svg &
+    background-image url("/resource/images/sprite.svg")
+
+  &:hover
+    background-position 0px -32px
+
+.hash-link:before
+  display inline-block
+  content " "
+  margin-top -200px
+  height 200px
+  visibility hidden
+
+
+
+
+
+
+//
+// TABBED AREAS
+//
+
+.tabs
+  position relative
+
+.tabs__nav
+  position absolute
+  top 0
+  right 0
+
+  li
+    float left
+    list-style none
+    margin-left -1px
+
+  button
+    display block
+    border 1px solid #e7e7e7
+    background-color #eee
+    color #ccc
+    padding 0.5em 1em
+
+    &:focus
+    &:hover
+      color #aaa
+      background-color #e7e7e7
+  li.active button
+      color #aaa
+      background-color #e7e7e7
+
+.tabs__content
+  clear left
+
+.js .tabs__item
+  display none
+
+  &.active
+    display block
+
+
+// Blockquote
+blockquote
+  p
+    font-size 1.6em
+    line-height 1.3
+
+  p:first-of-type
+    &:before
+      content open-quote
+    &:after
+      content close-quote
+
+  small
+    display block
+    text-align right
+    font-size 0.4em
+    margin-top 0.2em
+
+    &, a, cite
+      color #777
+      font-style normal
+
+@media $b700
+  blockquote
+    p
+      padding-left 1.5em
+      padding-right 1.5em

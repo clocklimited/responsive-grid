@@ -1,0 +1,151 @@
+//
+// SETTINGS
+// ========
+// Project specific setings which can be changed to modify the basic look and
+// feel of the project with little effort.
+//
+
+
+//
+// ENABLE DEBUG STYLING
+// Options are
+// * error: Only critical bugs are shown
+// * warning: Show error and warning bugs
+// * all: Show error and warning bugs, as well as general tips / minor bugs
+//
+
+$debugMode = false
+$debugLevel = 'all'
+
+
+//
+// LAYOUT
+//
+
+
+
+//
+// Grid settings
+//
+
+$gutter = 3em
+
+
+//
+// Breakpoints and Media Queries
+//
+
+$lapStart = 800px
+$deskStart = 1024px
+$palmEnd = $lapStart - 1px
+$lapEnd = $deskStart - 1px
+
+$palmMq = "only screen and (max-width:" + $lapStart + ")"
+$lapMq = "only screen and (min-width:" + $lapStart +") and (max-width:" + $lapEnd + ")"
+$portableMq = "only screen and (max-width:" + $lapEnd + ")"
+$deskMq = "only screen and (min-width:" + $deskStart+ ")"
+$lapAndDeskMq = "only screen and (min-width:" + $lapStart + ")"
+
+
+
+
+$baseMarginBottom = 1.5em
+
+$b699  = "screen and (max-width: 699px )"
+$b700  = "screen and (min-width: 700px )"
+$b800  = "screen and (min-width: 800px )"
+$b900  = "screen and (min-width: 900px )"
+$b1000 = "screen and (min-width: 1000px)"
+$b1100 = "screen and (min-width: 1100px)"
+$b1200 = "screen and (min-width: 1200px)"
+$b1400 = "screen and (min-width: 1400px)"
+$b1600 = "screen and (min-width: 1600px)"
+$b1800 = "screen and (min-width: 1800px)"
+
+//
+// TYPOGRAPHY
+//
+
+$headingFontFamily = 'Lato', Arial, sans-serif
+
+$baseFontFamily = 'Droid Serif', Georgia, Serif
+$baseFontSize = 14px
+$baseLineHeight = 1.6
+$baseFontColor = #222
+
+
+//
+// COLOURS
+//
+$colorBodyBg = #f5f9f8
+$colorBodyBgDark = #ebeee7
+
+// Brand Colours
+$colorPrimary = #5398a5
+
+// Sectional Colours
+$sectionDefault = #d4a36d
+$sectionDefaultDark = #ab8559
+$sectionHTML = #de6e66
+$sectionHTMLDark = #b45854
+$sectionCSS = #1c805a
+$sectionCSSDark = #16694c
+$sectionJavascript = #876079
+$sectionJavascriptDark = #6c4e63
+$sectionDocuments = #5598a7
+$sectionDocumentsDark = #427d86
+
+
+// Base Button / Notification Colours
+$colorBase = #bbb
+$colorBorder = #ddd
+
+// Notification Colours
+$colorSuccess = #47a967
+$colorNotice = #4791a9
+$colorWarning = #dc7f2a
+$colorError = #ca4427
+
+
+//
+// FORM SPECIFIC
+//
+
+$textInputPadding = 5px 10px
+$inputBackgroundColor = #FFFFFF // Remove?
+
+
+//
+// GLOBAL VISUAL ELEMENTS
+//
+
+$baseBorderRadius = 0 // Set to 0 to disable
+$baseBoxShadow = 0px 1px 4px rgba(69, 85, 93, 0.4) // Set to none to disable
+
+
+//
+// ANIMATIONS AND TRANSITIONS
+//
+
+$baseTransitionDuration = 0.2s // Set to 0s to disable transitions // Remove?
+$baseTransitionEasing = ease // Remove?
+
+
+//
+// MIXINS
+// ======
+//
+
+//
+// BUTTON STYLE
+//
+
+buttonStyle(color)
+  color #fff
+  background-color #222
+  font-weight bold
+  background-color color
+  border 1px solid rgba(0,0,0,.1)
+  // box-shadow 0 1px 1px rgba(#fff, 0.3) inset, 0 1px 3px rgba(#000, 0.1)
+  // text-shadow 0 -1px 0 rgba(0,0,0,.2)
+  border-radius 2px

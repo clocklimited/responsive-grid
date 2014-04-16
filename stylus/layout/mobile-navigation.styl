@@ -1,0 +1,114 @@
+//
+// MAIN NAVIGATION
+// ===============
+//
+
+// @media $b699
+//   html
+//   body
+//     overflow-x hidden
+
+// .mobile-navigation
+//   position absolute
+//   background-color #222
+//   height 100%
+//   z-index 2
+//   top 0
+//   left 0
+
+@media $b700
+
+  .mobile-sidebar
+    display none
+
+
+html
+  min-height 100%
+  overflow-x hidden
+  position relative
+
+.mobile-sidebar-open
+  overflow-x hidden
+
+.mobile-sidebar
+  position absolute
+  background #222
+  min-height 100%
+  padding 0px
+
+  margin-left -85%
+  width 85%
+  float left
+  z-index 2
+
+  bottom 0
+
+  transition margin-left .4s ease
+
+
+.container
+  width 100%
+  margin-left 0
+  float right
+  z-index 1
+  position relative
+
+  transition margin-right .4s ease
+
+  clearfix()
+
+
+@media $b699
+  .mobile-sidebar-open
+
+    .mobile-sidebar
+      margin-left 0
+
+    .container
+      margin-right -85%
+
+
+.mobile-sidebar
+
+  .site-title
+    float none
+
+  .main-navigation
+    .nav-list
+
+      a
+        position relative
+        display block
+        padding 0.5em 1em
+        font-family $headingFontFamily
+        font-weight 400
+        line-height 1.4
+        color #fff
+        letter-spacing 0.05em
+        text-rendering optimizeLegibility
+
+        &:focus
+        &:hover
+        &:active
+          text-decoration none
+          background-color #555
+          color #fff
+
+    .subnav
+
+      a
+        text-indent 1em
+        color #555
+
+    // .section-html
+    //   .subnav a:before
+    //     content "<! "
+    // .section-css
+    //   .subnav a:before
+    //     content "/* "
+    // .section-javascript
+    //   .subnav a:before
+    //     content "// "
+    // .section-documents
+    //   .subnav a:before
+    //     content "[ "

@@ -4,7 +4,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta charset="utf-8">
     <title>Responsive Grid | Clock</title>
+
     <link href="css/index.css" rel="stylesheet">
+    <link rel="shortcut icon" href="/images/meta/favicon.ico">
+
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="#1c805a">
+    <meta name="apple-mobile-web-app-title" content="Responsive Grid">
   </head>
 
   <body id="top" class="open section page-css-stylus language-css">
@@ -12,19 +19,13 @@
       <header class="main-header">
         <div class="centering centering-unpadded">
           <button title="Toggle navigation" class="btn-link btn-mobile-nav js-toggle-mobile-nav"><i class="icon icon-nav">&#9776;</i></button>
-          <h1 class="site-title"><a href="/">Responsive Grids</a></h1>
+          <h1 class="site-title"><a href="/">Responsive Grid</a></h1>
 
 
           <nav class="main-navigation">
             <ul class="nav-list">
-              <li class="section-html"><a href="/html">Introduction</a>
-              </li>
-              <li class="section-css has-subnav"><a href="/css" class="active">Usage</a>
-                <ul class="subnav">
-                  <li><a href="/css/stylus">Basic Grid</a></li>
-                  <li><a href="/css/stylus">Grid Modifiers</a></li>
-                  <li><a href="/css/stylus">Reversing the Grid</a></li>
-                </ul>
+              <li>
+                <a href="/html" class="active">Introduction</a>
               </li>
             </ul>
           </nav>
@@ -39,131 +40,6 @@
       <div class="page-content">
         <div class="section">
           <div class="centering"><p><em>This page is a work in progress</em></p>
-  <blockquote>
-  <p>Expressive, robust, feature-rich CSS language built for nodejs</p>
-  <p><small><cite><a href="http://learnboost.github.io/stylus/">learnboost.github.io/stylus/</a></cite></small></p>
-  </blockquote>
-  <p>Stylus is a CSS preprocessor, similar to LESS and Sass. It features the most minimal syntax of these three and has huge benefits over regular CSS in terms of speed of writing and dynamic features.</p>
-  <p>When writing Stylus, use the same guidelines as when writing CSS. However there are a few major differences to keep in mind which are outlined in this document.</p>
-
-          </div>
-        </div>
-        <div class="section">
-          <div class="centering"><h2>General Syntax</h2>
-  <p>Whilst you can write Stylus as if it were standard CSS, we prefer to remove all unnecessary punctuation and repetition. The only exception when removing punctuation are the commas which appear between multiple selectors in a single rule. We write each selector on a new line, and leave trailing commas to make it obvious that the rule is matching multiple selectors.</p>
-
-            <div class="grid">
-              <div class="grid__item one-whole lapdesk-one-half"><h6>CSS Syntax</h6>
-  <pre><code>.class1, .class2 {
-    position: relative;
-    color: blue;
-  }
-
-  .class1:hover, .class2:hover {
-    color: red;
-  }</code></pre>
-
-              </div>
-              <div class="grid__item one-whole lapdesk-one-half"><h6>Minimal Stylus Syntax</h6>
-  <pre><code>.class1,
-  .class2
-    position relative
-    color blue
-
-    &amp;:hover
-      color red</code></pre>
-
-              </div>
-            </div><p>There are some rare exceptions to the multiple selectors on new lines rule. These mainly occur in the base stylesheet. Use your judgement to decide if selectors benefit from being on one line:</p>
-  <pre><code>h1, h2, h3, h4, h5, h6
-    font-weight bold</code></pre>
-
-          </div>
-        </div>
-        <div class="section">
-          <div class="centering"><h2>Formatting</h2>
-  <p>While we always use double quotes for standard CSS, we use single quotes in Stylus. These are quicker and easier to write, and automatically compiled to double quotes when the CSS is generated.</p>
-
-          </div>
-        </div>
-        <div class="section">
-          <div class="centering"><h2>Nesting</h2>
-  <p>One of the most important things to understand when writing CSS through a pre-processor, is how your final compiled CSS will look. What saves loads of time in development, can produce bloated slow code that will forever degrade the final performance of your product. This is related to the &quot;Over Qualifying Selectors&quot; section of the CSS Guidelines.</p>
-
-            <div class="grid">
-              <div class="grid__item one-whole lapdesk-one-half"><h6>Too much nesting</h6>
-  <pre><code>.wrapper
-    .main-header
-      ul.main-navigation
-      width 100%
-      li
-        float left
-        a
-          color #555
-          &amp;:hover
-            color #000</code></pre>
-
-              </div>
-              <div class="grid__item one-whole lapdesk-one-half"><h6>Compiles to</h6>
-  <pre><code>.wrapper .main-header ul.main-navigation {
-    width: 100%;
-  }
-  .wrapper .main-header ul.main-navigation li {
-    float: left;
-  }
-  .wrapper .main-header ul.main-navigation li a {
-    color: #555;
-  }
-  .wrapper .main-header ul.main-navigation li a:hover {
-    color: #000;
-  }</code></pre>
-
-              </div>
-            </div>
-            <div class="grid">
-              <div class="grid__item one-whole lapdesk-one-half"><h6>Improved Nesting</h6>
-  <pre><code>.main-navigation
-    width 100%
-    li
-      float left
-    a
-      color #555
-      &amp;:hover
-      color #000</code></pre>
-
-              </div>
-              <div class="grid__item one-whole lapdesk-one-half"><h6>Compiles to:</h6>
-  <pre><code>.main-navigation ul {
-    width: 100%;
-  }
-  .main-navigation li {
-    float: left;
-  }
-  .main-navigation a {
-    color: #555;
-  }
-  .main-navigation a:hover {
-    color: #000;
-  }</code></pre>
-
-              </div>
-            </div><p>These achieve the same effect, but the first example takes 36% more code to do the same thing. That is a lot of extra code for such a small example - imagine that same effect across an entire project!</p>
-  <p>Be aware of indentation levels and be sure that the things you are nesting definitely need to be nested.</p>
-  <p>Notice in the second example that the <code>li</code> styles aren’t nested inside the <code>ul</code> styles, and the a styles aren’t nested inside the <code>li</code> styles. We can do this with confidence, as we know that all links within <code>.main-navigation</code> should be within <code>li</code> elements, which themselves will live inside a list element. Our CSS doesn’t need to know this.</p>
-  <p>Also notice that we didn’t need to tell our CSS that the .main-navigation appears within the <code>.main-header</code> or the <code>.wrapper</code> element. It will be styled the same regardless.</p>
-
-          </div>
-        </div>
-        <div class="section">
-          <div class="centering"><h4>Still to write / review</h4>
-            <ul>
-              <li>Why Stylus</li>
-              <li>Features - mixins, nesting, variable, extending</li>
-              <li>Extras - nib for vendor prefixes, gradients etc.</li>
-              <li>Warnings - over-nesting, extending within media queries, extend - a fools gold</li>
-            </ul>
-
-          </div>
         </div>
       </div>
       <footer class="main-footer">
@@ -204,5 +80,10 @@
         </ul>
       </nav>
     </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/resource/js/lib/prism.js"></script>
+    <script src="/resource/js/lib/hide-address-bar.js"></script>
+    <script src="/resource/js/global.js"></script>
   </body>
 </html>

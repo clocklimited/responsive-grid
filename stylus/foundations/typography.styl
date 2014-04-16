@@ -1,0 +1,190 @@
+//
+// TYPOGRAPHIC STYLES
+// ==================
+//
+
+//
+// SELECTED TEXT
+//
+
+::-moz-selection
+  color #fff
+  background #4992ad
+  text-shadow none
+::selection
+  color #fff
+  background #4992ad
+  text-shadow none
+
+
+//
+// BASE STYLES
+//
+
+html
+  font-size $baseFontSize
+
+body
+  font-family $baseFontFamily
+  font-size 1em
+  line-height 1.7
+  color #222
+  font-weight 400
+
+
+  @media $b700
+    font-size 1.2em
+  @media $b800
+    font-size 1.2em
+  @media $b900
+    font-size 1.3em
+  @media $b1000
+    font-size 1.4em
+  @media $b1200
+    font-size 1.45em
+  @media $b1400
+    font-size 1.5em
+  // @media $b1600
+  //   font-size 1.4em
+  // @media $b1800
+  //   font-size 1.5em // 21
+
+
+//
+// HEADINGS
+// Uses a Double-stranded heading hierarchy to preserve the document outline.
+// http://csswizardry.com/2012/02/pragmatic-practical-font-sizing-in-css/
+//
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6
+  font-family $headingFontFamily
+  font-weight 900
+  line-height 1
+  color #222
+  letter-spacing 0.05em
+  text-rendering optimizeLegibility
+
+h1, .h1
+  font-size 2.375em
+  text-transform uppercase
+h2, .h2
+  font-size 1.6em
+h3, .h3
+  color #999
+  font-size 1.4em
+h4, .h4
+  font-size 1.2em
+h5, .h5
+  font-size 1.1em
+h6, .h6
+  font-size 1em
+
+
+//
+// LINKS
+//
+
+a
+  color $colorPrimary
+  text-decoration none
+
+  &:focus,
+  &:hover
+    color #222
+    text-decoration underline
+
+  &:active
+    color #222
+
+
+//
+// EMPHASIS
+//
+
+blockquote, q, em, cite, dfn, i, var
+  font-style italic
+
+th, strong, dt, b
+  font-weight bold
+
+
+//
+// FORMS
+//
+
+legend
+  padding-bottom .5em
+
+input, select, textarea
+  font-size 1em
+
+
+//
+// QUOTES
+//
+
+blockquote p:before, blockquote p:after, q:before, q:after
+  content ''
+
+blockquote
+  font-size 1.125em
+
+blockquote
+  p
+    margin-bottom 0
+
+
+//
+// TEXT MARKING
+//
+
+ins
+  text-decoration none
+  border-bottom 3px double #333
+
+del
+  text-decoration line-through
+
+mark
+  background-color #dee154
+  color #222
+  font-weight bold
+
+
+//
+// PRE-FORMATTED TEXT / CODE BLOCKS
+//
+
+pre
+code
+  font-family 'Menlo', 'Monaco', monospace
+  color #888
+  font-size 1em
+  word-wrap break-word
+
+
+//
+// MISC PRESONTATIONAL ELEMENTS
+//
+
+abbr
+  border-bottom 1px dotted #333
+  font-variant normal
+
+small
+  font-size 0.8em
+
+sub,
+sup
+  position relative
+  font-size 75%
+  line-height 0
+  vertical-align baseline
+
+sup
+  top -0.5em
+
+sub
+  bottom -0.25em
+

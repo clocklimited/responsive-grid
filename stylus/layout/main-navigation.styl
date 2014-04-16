@@ -1,0 +1,126 @@
+//
+// MAIN NAVIGATION
+// ===============
+//
+
+
+
+
+
+
+
+
+
+
+
+// .nav-expand
+//   display block
+//   position absolute
+//   right 0
+//   top 0
+//   bottom 0
+//   width 2.4em
+//   text-align center
+//   vertical-align middle
+
+//   &:focus
+//   &:hover
+//   &:active
+//     text-decoration none
+//     background-color darken($pageBgColor, 40%)
+
+// .icon-nav-expand
+//   position relative
+//   top -0.2em
+//   display inline-block
+//   width 0
+//   height 0
+//   border-style solid
+//   border-width 0.4em 0.4em 0 0.4em
+//   border-color #fff transparent transparent
+
+
+
+.main-header
+  .main-navigation
+    display none
+
+
+@media $b700
+
+  //
+  // PRIMARY LEVEL LINKS
+  //
+
+  .main-header
+    .main-navigation
+      display inline-block
+
+  .main-navigation
+    float right
+
+    .nav-list
+      clearfix()
+      position relative
+
+      li
+        float left
+
+      a
+        position relative
+        display block
+        padding 0.5em 1em
+        font-family $headingFontFamily
+        font-weight 400
+        line-height 1.4
+        color #fff
+        letter-spacing 0.05em
+        text-rendering optimizeLegibility
+
+        &:focus
+        &:hover
+        &:active
+        &.active
+          text-decoration none
+          // background-color darken($pageBgColor, 40%)
+          background-color #555
+
+
+      .has-subnav:hover
+        > a:after
+          content ""
+          position absolute
+          left 50%
+          top 100%
+          width 0
+          height 0
+          margin-left -1em
+          border-style solid
+          border-color transparent transparent #333
+          border-width 0 1em 1em
+
+    .subnav
+      display none
+      position absolute
+      top 100%
+      left 0
+      width 100%
+      text-align left
+      padding-top 1em
+
+      li
+        // background-color darken($pageBgColor, 20)
+        background-color #333
+        width 100%
+        border none
+        margin-top -1px
+
+      a:hover
+        // background-color #fff
+        // color $pageBgColor
+        background-color #555
+
+    .nav-list
+      li:hover
+        .subnav
+          display block

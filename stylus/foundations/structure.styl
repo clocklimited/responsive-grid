@@ -1,0 +1,76 @@
+//
+// STRUCTURAL STYLES
+// =================
+// Elements which contain all page content – including header, footer, nav etc.
+//
+
+
+.centering
+  clearfix()
+  margin-left auto
+  margin-right auto
+  max-width 40em
+  padding-left 1em
+  padding-right 1em
+
+.centering-unpadded
+  max-width 42em
+  padding-left 0
+  padding-right 0
+
+//
+// PAGE ELEMENTS
+//
+
+.page-header
+  height 12em
+  background-color $sectionDefault
+
+  h1
+    margin-top 2.5em
+    text-align center
+    font-size 2em
+    color #fff
+
+.page-content
+  background-color $colorBodyBg
+  position relative
+  z-index 1
+  min-height 400px
+
+  &:before
+    content ""
+    position absolute
+    bottom 100%
+    left 0
+    right 0
+    height 20px
+    background-image linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.1) 100%)
+
+  ul, ol
+    li
+      list-style-position outside
+      margin-left 1.5em
+  ul
+    li
+      list-style-type disc
+  ol
+    li
+      list-style-type decimal
+
+
+@media $b700
+
+  .page-header
+    position fixed
+    top 0
+    left 0
+    height 16em
+    width 100%
+
+    h1
+      font-size 3em
+
+  .page-content
+    margin-top 16em
+    margin-bottom 5em

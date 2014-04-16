@@ -1,0 +1,109 @@
+//
+// BASE STYLES
+// ===========
+// Typographic styles should live in typography.styl
+// Form and Table styles live in their respective stylesheets
+//
+
+
+//
+// SPACING
+// Unset margins and padding, the reset for specific elements
+//
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section
+  display block // Display in IE
+  margin 0
+  padding 0
+
+html, body, p, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td
+  margin 0
+  padding 0
+
+h1, h2, h3, h4, h5, h6
+  margin-bottom 1em
+
+p, pre, ul, ol, dd, hr, legend, button, address, table, blockquote, pre
+  margin-bottom 1.5em
+
+
+//
+// BASIC ELEMENTS
+//
+
+body
+  background $colorBodyBg
+
+
+//
+// LISTS
+//
+
+li
+  list-style-position inside
+
+  ul &
+    list-style-type disc
+
+  ol &
+    list-style-type decimal
+
+// Unstyle navigation lists
+nav
+  ul, ol
+    margin-bottom 0
+  li
+    list-style none
+
+  dd
+    margin-top .5em
+
+
+//
+// FORMS
+//
+
+fieldset
+  border none
+
+
+//
+// MEDIA
+//
+
+img
+  border 0
+
+img, object
+  vertical-align bottom
+
+// Responsive images
+img
+  max-width 100%
+  width auto
+  height auto
+
+
+//
+// PRE-FORMATTED TEXT / CODE BLOCKS
+//
+
+// pre
+//   code
+//     display block
+//     padding 1em
+//     background-color #eee
+//     border 1px solid #e7e7e7
+
+
+//
+// MISC
+//
+
+hr
+  display block
+  height 1px
+  width 100%
+  border 0
+  background-color #ccc
+
