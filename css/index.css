@@ -202,3 +202,31 @@
 .fifteen-sixteenths {
   width: 93.75%;
 }
+.section ::-moz-selection {
+  color: #fff;
+  background: #1c805a;
+  text-shadow: none;
+}
+.section ::selection {
+  color: #fff;
+  background: #1c805a;
+  text-shadow: none;
+}
+.section .page-header {
+  background-color: #1c805a;
+}
+.section .main-footer {
+  background-color: #1c805a;
+  color: #fff;
+}
+.section .main-footer {
+  font-family: Consolas, Monaco, 'Andale Mono', monospace;
+}
+.section .main-footer small:before {
+  content: '/* ';
+  opacity: 0.7;
+}
+.section .main-footer small:after {
+  content: ' */';
+  opacity: 0.7;
+}

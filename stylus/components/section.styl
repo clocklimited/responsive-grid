@@ -1,0 +1,35 @@
+sectionStyling($sectionColor)
+  ::-moz-selection
+    color #fff
+    background $sectionColor
+    text-shadow none
+  ::selection
+    color #fff
+    background $sectionColor
+    text-shadow none
+
+  .page-header
+    background-color $sectionColor
+
+  .main-footer
+    background-color $sectionColor
+    color #fff
+
+
+sectionFooterStyle($startString = false, $endString = false)
+  .main-footer
+    font-family Consolas, Monaco, 'Andale Mono', monospace
+    small
+      if $startString and $startString != ''
+        &:before
+          content $startString
+          opacity 0.7
+      if $endString and $endString != ''
+        &:after
+          content $endString
+          opacity 0.7
+
+
+.section
+  sectionStyling(#1c805a)
+  sectionFooterStyle('/* ', ' */')
