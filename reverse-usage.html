@@ -1,0 +1,98 @@
+>
+                <a href="/html" class="active">Introduction</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <header class="page-header">
+        <div class="centering">
+          <h1>Introduction</h1>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="section">
+
+    <div id="reversed-grid" class="container">
+      <h2>Reversed grid</h2>
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid.grid--reversed
+  .grid__item.one-half
+    .text Right
+  .grid__item.one-half
+    .text Left</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 1 2)
+grid-reverse()</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example</h3>
+      <div class="grid grid--reversed">
+        <div class="grid__item one-half">
+          <div class="text">Right</div>
+        </div>
+        <div class="grid__item one-half">
+          <div class="text">Left</div>
+        </div>
+      </div>
+    </div>
+
+        </div>
+      </div>
+      <footer class="main-footer">
+        <div class="centering footer-content"><small>© 2014 Clock Ltd.</small></div>
+      </footer>
+    </div>
+
+
+    <div class="mobile-sidebar">
+      <div class="h1 site-title"><a href="/">Dev Guides</a></div>
+      <nav class="main-navigation">
+        <ul class="nav-list">
+          <li class="section-html has-subnav"><a href="/html">HTML</a>
+            <ul class="subnav">
+              <li><a href="/html/jade">Using Jade</a></li>
+              <li><a href="/html/choosing-classes">Choosing Classes</a></li>
+            </ul>
+          </li>
+          <li class="section-css has-subnav"><a href="/css" class="active">CSS</a>
+            <ul class="subnav">
+              <li><a href="/css/stylus">Using Stylus</a></li>
+            </ul>
+          </li>
+          <li class="section-javascript has-subnav"><a href="/js">JavaScript</a>
+            <ul class="subnav">
+              <li><a href="/js/setup">Our Setup</a></li>
+              <li><a href="/js/style-guide">Style Guide</a></li>
+              <li><a href="/js/tips">Tips</a></li>
+            </ul>
+          </li>
+          <li class="section-documents has-subnav"><a href="/documents">Documents</a>
+            <ul class="subnav">
+              <li><a href="/documents/browser-support">Browser Support</a></li>
+              <li><a href="/documents/design-deliverables">Design Deliverables</a></li>
+              <li><a href="/documents/working-with-sublime">Working With Sublime</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/resource/js/lib/prism.js"></script>
+    <script src="/resource/js/lib/hide-address-bar.js"></script>
+    <script src="/resource/js/global.js"></script>
+  </body>
+</html>

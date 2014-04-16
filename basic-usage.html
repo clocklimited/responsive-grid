@@ -1,0 +1,500 @@
+>
+                <a href="/html" class="active">Introduction</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+
+      <header class="page-header">
+        <div class="centering">
+          <h1>Introduction</h1>
+        </div>
+      </header>
+      <div class="page-content">
+        <div class="section">
+
+    <div class="container">
+      <h2>The basic grid</h2>
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-whole
+    .text .grid__item.one-whole</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 1)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example</h3>
+      <div class="grid">
+        <div class="grid__item one-whole">
+          <div class="text">.grid__item.one-whole</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-half
+    .text .grid__item.one-half</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 2)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example</h3>
+      <div class="grid">
+        <div class="grid__item one-half">
+          <div class="text">.grid__item.one-half</div>
+        </div>
+        <div class="grid__item one-half">
+          <div class="text">.grid__item.one-half</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-third
+    .text .grid__item.one-half
+  .grid__item.two-thirds
+    .text .grid__item.two-thirds</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 3)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-third">
+          <div class="text">.grid__item.one-third</div>
+        </div>
+        <div class="grid__item two-thirds">
+          <div class="text">.grid__item.two-thirds</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-quarter
+    .text .grid__item.one-quarter
+  .grid__item.three-quarters
+    .text .grid__item.three-quarters</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 4)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-quarter">
+          <div class="text">.grid__item.one-quarter</div>
+        </div>
+        <div class="grid__item three-quarters">
+          <div class="text">.grid__item.three-quarters</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-fifth
+    .text .grid__item.one-fifth
+  .grid__item.four-fifths
+    .text .grid__item.four-fifths
+  .grid__item.two-fifths
+    .text .grid__item.two-fifths
+  .grid__item.three-fifths
+    .text .grid__item.three-fifths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 5)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example         </h3>
+      <div class="grid">
+        <div class="grid__item one-fifth">
+          <div class="text">.grid__item.one-fifth</div>
+        </div>
+        <div class="grid__item four-fifths">
+          <div class="text">.grid__item.four-fifths</div>
+        </div>
+        <div class="grid__item two-fifths">
+          <div class="text">.grid__item.two-fifths</div>
+        </div>
+        <div class="grid__item three-fifths">
+          <div class="text">.grid__item.three-fifths</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-sixth
+    .text .grid__item.one-sixth
+  .grid__item.five-sixths
+    .text .grid__item.five-sixths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 6)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-sixth">
+          <div class="text">.grid__item.one-sixth</div>
+        </div>
+        <div class="grid__item five-sixths">
+          <div class="text">.grid__item.five-sixths</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-seventh
+    .text .grid__item.one-seventh
+  .grid__item.six-sevenths
+    .text .grid__item.six-sevenths
+  .grid__item.two-sevenths
+    .text .grid__item.two-sevenths
+  .grid__item.five-sevenths
+    .text .grid__item.five-sevenths
+  .grid__item.three-sevenths
+    .text .grid__item.three-sevenths
+  .grid__item.four-sevenths
+    .text .grid__item.four-sevenths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 7)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-seventh">
+          <div class="text">.grid__item.one-seventh</div>
+        </div>
+        <div class="grid__item six-sevenths">
+          <div class="text">.grid__item.six-sevenths</div>
+        </div>
+        <div class="grid__item two-sevenths">
+          <div class="text">.grid__item.two-sevenths</div>
+        </div>
+        <div class="grid__item five-sevenths">
+          <div class="text">.grid__item.five-sevenths</div>
+        </div>
+        <div class="grid__item three-sevenths">
+          <div class="text">.grid__item.three-sevenths</div>
+        </div>
+        <div class="grid__item four-sevenths">
+          <div class="text">.grid__item.four-sevenths</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-eighth
+    .text .grid__item.one-eighth
+  .grid__item.seven-eighths
+    .text .grid__item.seven-eighths
+  .grid__item.three-eighths
+    .text .grid__item.three-eighths
+  .grid__item.five-eighths
+    .text .grid__item.five-eighths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 8)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-eighth">
+          <div class="text">.grid__item.one-eighth</div>
+        </div>
+        <div class="grid__item seven-eighths">
+          <div class="text">.grid__item.seven-eighths</div>
+        </div>
+        <div class="grid__item three-eighths">
+          <div class="text">.grid__item.three-eighths</div>
+        </div>
+        <div class="grid__item five-eighths">
+          <div class="text">.grid__item.five-eighths</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-tenth
+    .text .grid__item.one-tenth
+  .grid__item.nine-tenths
+    .text .grid__item.nine-tenths
+  .grid__item.three-tenths
+    .text .grid__item.three-tenths
+  .grid__item.seven-tenths
+    .text .grid__item.seven-tenths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 10)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-tenth">
+          <div class="text">.grid__item.one-tenth</div>
+        </div>
+        <div class="grid__item nine-tenths">
+          <div class="text">.grid__item.nine-tenths</div>
+        </div>
+        <div class="grid__item three-tenths">
+          <div class="text">.grid__item.three-tenths</div>
+        </div>
+        <div class="grid__item seven-tenths">
+          <div class="text">.grid__item.seven-tenths</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-twelfth
+    .text .grid__item.one-twelfth
+  .grid__item.eleven-twelfths
+    .text .grid__item.eleven-twelfths
+  .grid__item.five-twelfths
+    .text .grid__item.five-twelfths
+  .grid__item.seven-twelfths
+    .text .grid__item.seven-twelfths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 12)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example          </h3>
+      <div class="grid">
+        <div class="grid__item one-twelfth">
+          <div class="text">.grid__item.one-twelfth</div>
+        </div>
+        <div class="grid__item eleven-twelfths">
+          <div class="text">.grid__item.eleven-twelfths</div>
+        </div>
+        <div class="grid__item five-twelfths">
+          <div class="text">.grid__item.five-twelfths</div>
+        </div>
+        <div class="grid__item seven-twelfths">
+          <div class="text">.grid__item.seven-twelfths</div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="grid">
+        <div class="grid__item one-half">
+          <h3>Jade</h3>
+          <div class="body">
+            <pre><code>.grid
+  .grid__item.one-sixteenth
+    .text .grid__item.one-sixteenth
+  .grid__item.fifteen-sixteenths
+    .text .grid__item.fifteen-sixteenths
+  .grid__item.three-sixteenths
+    .text .grid__item.three-sixteenths
+  .grid__item.thirteen-sixteenths
+    .text .grid__item.thirteen-sixteenths
+  .grid__item.five-sixteenths
+    .text .grid__item.five-sixteenths
+  .grid__item.eleven-sixteenths
+    .text .grid__item.eleven-sixteenths
+  .grid__item.seven-sixteenths
+    .text .grid__item.seven-sixteenths
+  .grid__item.nine-sixteenths
+    .text .grid__item.nine-sixteenths</code></pre>
+          </div>
+        </div>
+        <div class="grid__item one-half">
+          <h3>Stylus</h3>
+          <div class="body">
+            <pre><code>@include 'responsive-grid'
+
+grid-base()
+grid-widths('', 16)</code></pre>
+          </div>
+        </div>
+      </div>
+      <h3>Example</h3>
+      <div class="grid">
+        <div class="grid__item one-sixteenth">
+          <div class="text">.grid__item.one-sixteenth</div>
+        </div>
+        <div class="grid__item fifteen-sixteenths">
+          <div class="text">.grid__item.fifteen-sixteenths</div>
+        </div>
+        <div class="grid__item three-sixteenths">
+          <div class="text">.grid__item.three-sixteenths</div>
+        </div>
+        <div class="grid__item thirteen-sixteenths">
+          <div class="text">.grid__item.thirteen-sixteenths</div>
+        </div>
+        <div class="grid__item five-sixteenths">
+          <div class="text">.grid__item.five-sixteenths</div>
+        </div>
+        <div class="grid__item eleven-sixteenths">
+          <div class="text">.grid__item.eleven-sixteenths</div>
+        </div>
+        <div class="grid__item seven-sixteenths">
+          <div class="text">.grid__item.seven-sixteenths</div>
+        </div>
+        <div class="grid__item nine-sixteenths">
+          <div class="text">.grid__item.nine-sixteenths</div>
+        </div>
+      </div>
+    </div>
+
+            </div>
+      </div>
+      <footer class="main-footer">
+        <div class="centering footer-content"><small>© 2014 Clock Ltd.</small></div>
+      </footer>
+    </div>
+
+
+    <div class="mobile-sidebar">
+      <div class="h1 site-title"><a href="/">Dev Guides</a></div>
+      <nav class="main-navigation">
+        <ul class="nav-list">
+          <li class="section-html has-subnav"><a href="/html">HTML</a>
+            <ul class="subnav">
+              <li><a href="/html/jade">Using Jade</a></li>
+              <li><a href="/html/choosing-classes">Choosing Classes</a></li>
+            </ul>
+          </li>
+          <li class="section-css has-subnav"><a href="/css" class="active">CSS</a>
+            <ul class="subnav">
+              <li><a href="/css/stylus">Using Stylus</a></li>
+            </ul>
+          </li>
+          <li class="section-javascript has-subnav"><a href="/js">JavaScript</a>
+            <ul class="subnav">
+              <li><a href="/js/setup">Our Setup</a></li>
+              <li><a href="/js/style-guide">Style Guide</a></li>
+              <li><a href="/js/tips">Tips</a></li>
+            </ul>
+          </li>
+          <li class="section-documents has-subnav"><a href="/documents">Documents</a>
+            <ul class="subnav">
+              <li><a href="/documents/browser-support">Browser Support</a></li>
+              <li><a href="/documents/design-deliverables">Design Deliverables</a></li>
+              <li><a href="/documents/working-with-sublime">Working With Sublime</a></li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+    <script src="/resource/js/lib/prism.js"></script>
+    <script src="/resource/js/lib/hide-address-bar.js"></script>
+    <script src="/resource/js/global.js"></script>
+  </body>
+</html>
