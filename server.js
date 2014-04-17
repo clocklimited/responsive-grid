@@ -52,7 +52,7 @@ function serve() {
     .use(setCacheHeaders)
     .use('/responsive-grid', router)
     // Gzip Compression for static assets
-    .use('/responsive-grid', express.compress({ filter: compressFilter }))
+    .use(express.compress({ filter: compressFilter }))
     .use('/responsive-grid', express.static(__dirname + '/', { maxAge: staticContentExpiry }))
     .use(notFound)
 
