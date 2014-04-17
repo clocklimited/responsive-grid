@@ -1,0 +1,61 @@
+extend ../../layouts/default
+
+block content
+
+  .section
+    .centering
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-third
+                |     .text .grid__item.one-third
+                |   .grid__item.pull-one-third.one-third
+                |     .text .grid__item.pull-one-third.one-third
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 3)
+                | grid-pull('', 3)
+      h3 Example
+      .grid
+        .grid__item.one-third
+          .text .grid__item.one-third
+        .grid__item.pull-one-third.one-third
+          .text .grid__item.pull-one-third.one-third
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-third
+                |     .text .grid__item.one-third
+                |   .grid__item.push-one-third.one-third
+                |     .text .grid__item.push-one-third.one-third
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 3)
+                | grid-push('', 3)
+      h3 Example
+      .grid
+        .grid__item.one-third
+          .text .grid__item.one-third
+        .grid__item.push-one-third.one-third
+          .text .grid__item.push-one-third.one-third

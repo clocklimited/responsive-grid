@@ -1,1 +1,105 @@
-<!DOCTYPE html><html lang="en" class="js"><head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta charset="utf-8"><title>Responsive Grid / Dev Guides</title><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="Jack Brewer"><link rel="stylesheet" href="/responsive-grid/static/css/index.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,400,900|Droid+Serif:400,700,400italic"><link rel="shortcut icon" href="/responsive-grid/static/images/meta/favicon-home.ico"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="apple-mobile-web-app-title" content="My App"></head></html><body id="top" class="open section"><div class="container"><header class="main-header"><div class="centering centering-unpadded"><button title="Toggle navigation" class="btn-link btn-mobile-nav js-toggle-mobile-nav"><i class="icon icon-nav">&#9776;</i></button><h1 class="site-title"><a href="/responsive-grid">Responsive Grid</a></h1><nav class="main-navigation"><ul class="nav-list"><li class="section-html"><a href="/responsive-grid" class="active">Introduction</a></li><li class="section-css has-subnav"><a href="/responsive-grid/usage/basic">Usage</a><ul class="subnav"><li><a href="/responsive-grid/usage/basic">Basic</a></li><li><a href="/responsive-grid/usage/modifiers">Modifiers</a></li><li><a href="/responsive-grid/usage/reverse">Reverse</a></li></ul></li></ul></nav></div></header><header class="page-header"><div class="centering"><h1>Responsive Grid</h1></div></header><div class="page-content"><div class="section"><div class="centering">Introduction</div></div></div><footer class="main-footer"><div class="centering footer-content"><small>© 2014 Clock Ltd.</small></div></footer></div><div class="mobile-sidebar"><div class="h1 site-title"><a href="/">Dev Guides</a></div><nav class="main-navigation"><ul class="nav-list"><li class="section-html"><a href="/responsive-grid" class="active">Introduction</a></li><li class="section-css has-subnav"><a href="/responsive-grid/usage/basic">Usage</a><ul class="subnav"><li><a href="/responsive-grid/usage/basic">Basic</a></li><li><a href="/responsive-grid/usage/modifiers">Modifiers</a></li><li><a href="/responsive-grid/usage/reverse">Reverse</a></li></ul></li></ul></nav></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="/responsive-grid/static/js/lib/prism.js"></script><script src="/responsive-grid/static/js/lib/hide-address-bar.js"></script><script src="/responsive-grid/static/js/global.js"></script></body>
+<!DOCTYPE html><html lang="en" class="js"><head><meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"><meta charset="utf-8"><title>Introduction / Dev Guides</title><meta name="description" content=""><meta name="keywords" content=""><meta name="author" content="Jack Brewer"><link rel="stylesheet" href="/responsive-grid/static/css/index.css"><link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Lato:100,400,900|Droid+Serif:400,700,400italic"><link rel="shortcut icon" href="/responsive-grid/static/images/meta/favicon-home.ico"><meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black"><meta name="apple-mobile-web-app-title" content="My App"></head></html><body id="top" class="open section"><div class="container"><header class="main-header"><div class="centering centering-unpadded"><button title="Toggle navigation" class="btn-link btn-mobile-nav js-toggle-mobile-nav"><i class="icon icon-nav">&#9776;</i></button><h1 class="site-title"><a href="/responsive-grid">Responsive Grid</a></h1><nav class="main-navigation"><ul class="nav-list"><li class="section-html"><a href="/responsive-grid" class="active">Introduction</a></li><li class="section-css has-subnav"><a href="/responsive-grid/usage/basic">Usage</a><ul class="subnav"><li><a href="/responsive-grid/usage/basic">Basic</a></li><li><a href="/responsive-grid/usage/modifiers">Modifiers</a></li><li><a href="/responsive-grid/usage/push-pull">Push & Pull</a></li><li><a href="/responsive-grid/usage/reverse">Reverse</a></li></ul></li></ul></nav></div></header><header class="page-header"><div class="centering"><h1>Introduction</h1></div></header><div class="page-content"><div class="section"><div class="centering"><h1 id="responsive-grid-build-status-https-travis-ci-org-clocklimited-responsive-grid-svg-branch-master-https-travis-ci-org-clocklimited-responsive-grid-">Responsive Grid <a href="https://travis-ci.org/clocklimited/responsive-grid"><img src="https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master" alt="Build Status"></a></h1>
+<p>A Stylus Plugin that provides a simple grid system. It&#39;s fully responsive, with modifiers available that provide full browser support.</p>
+<ul>
+<li><a href="#installation">Installation</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#settings">Settings</a></li>
+</ul>
+<h2 id="installation">Installation</h2>
+<h3 id="npm">NPM</h3>
+<p>Responsive Grid is on NPM.</p>
+<pre><code>npm install -g responsive-grid stylus</code></pre>
+<h3 id="executable">Executable</h3>
+<p>Below is an example of how to utilise responsive-grid and stylus.</p>
+<pre><code>stylus -w -u responsive-grid stylus/index.styl -o css/</code></pre>
+<p>For more information on the many ways you can use Stylus plugins, please refer to <a href="https://gist.github.com/timjgleeson/10641220">this guide</a>.</p>
+<h3 id="stylus-api">Stylus API</h3>
+<p>To gain access the responsive-grid mixins, simply add:</p>
+<pre><code>@import &#39;responsive-grid&#39;</code></pre>
+<h2 id="usage">Usage</h2>
+<p>Responsive Grid provides 5 mixins for use. These mixins can be used straight away without any modification to the settings.</p>
+<p>Full working examples of all the mixins below can be found in <a href="http://codepen.io/timjgleeson/full/KfBsc">this codepen</a>.</p>
+<h3 id="-grid-base-"><code>grid-base()</code></h3>
+<p>This will set up the block <code>.grid</code> class and the element <code>.grid__item</code> class.</p>
+<hr>
+<h3 id="-grid-widths-namespace-columns-"><code>grid-widths($namespace, $columns)</code></h3>
+<p>This will set up width classes based on the <code>$columns</code> you include.</p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><code>grid-widths(&#39;&#39;, 1 3 6)</code> will set up a whole class, thirds classes, and sixths classes.</li>
+<li><code>grid-widths(&#39;desk&#39;, 1 2 3)</code> will set up a <code>.{$namespace}</code> class each of the width classes.</li>
+</ul>
+<hr>
+<h3 id="-grid-pull-namespace-columns-"><code>grid-pull($namespace, $columns)</code></h3>
+<p>This will set up pull classes based on the <code>$columns</code> you include.</p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><code>grid-pull(&#39;&#39;, 1 3 6)</code> will set up <code>.pull-{width}</code> classes that move the <code>.grid__item</code> with a whole class, thirds classes, and sixths classes.</li>
+<li><code>grid-pull(&#39;desk&#39;, 1 2 3)</code> will set up a <code>.{$namespace}pull-{width}</code> class each of the pull classes.</li>
+</ul>
+<hr>
+<h3 id="-grid-push-namespace-columns-"><code>grid-push($namespace, $columns)</code></h3>
+<p>This will set up push classes based on the <code>$columns</code> you include.</p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><code>grid-push(&#39;&#39;, 1 3 6)</code> will set up <code>.push-{width}</code> classes that move the <code>.grid__item</code> with a whole class, thirds classes, and sixths classes.</li>
+<li><code>grid-push(&#39;desk&#39;, 1 2 3)</code> will set up a <code>.{$namespace}push-{width}</code> class each of the push classes.</li>
+</ul>
+<hr>
+<h3 id="-grid-modifier-namespace-gutter-"><code>grid-modifier($namespace, $gutter)</code></h3>
+<p>This will set up the modifier <code>.grid--{$namespace}</code> class and <code>.grid__item</code> children elements which modify the gutter length.</p>
+<h4 id="examples">Examples</h4>
+<ul>
+<li><code>grid-modified(&#39;em&#39;, 1em)</code> will set up a <code>.grid--{$namespace}</code> class that will provided 1em gutter between each <code>.grid__item</code>.</li>
+<li><code>grid-modified(&#39;percent&#39;, 10%)</code> will set up a <code>.grid--{$namespace}</code> class that will provided 10% gutter between each <code>.grid__item</code>.</li>
+<li><code>grid-modified(&#39;pixel&#39;, 20px)</code> will set up a <code>.grid--{$namespace}</code> class that will provided 20px gutter between each <code>.grid__item</code>.</li>
+</ul>
+<hr>
+<h3 id="-grid-reverse-"><code>grid-reverse()</code></h3>
+<p>This will set up modifier <code>.grid--reverse</code> class that, when applied, will visual reverse the DOM order of the <code>.grid__item</code>&#39;s.</p>
+<hr>
+<h2 id="settings">Settings</h2>
+<p>Below lists the settings available to the grid system (bold denotes a required variable):</p>
+<table>
+<thead>
+<tr>
+<th>Variable name</th>
+<th>Type</th>
+<th>Default</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>$grid--html-compressed</td>
+<td>boolean</td>
+<td>false</td>
+<td>If HTML is compressed, the whitespace hack used will be redundant.</td>
+</tr>
+<tr>
+<td>$grid--gutter</td>
+<td>unit</td>
+<td>20px</td>
+<td>Can be any the following unit types: <strong>em</strong>, <strong>%</strong>, <strong>px</strong></td>
+</tr>
+<tr>
+<td>$grid--count-names</td>
+<td>array</td>
+<td>one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen</td>
+<td>Forms the first half of the class name of the grid widths</td>
+</tr>
+<tr>
+<td>$grid--fraction-names</td>
+<td>array</td>
+<td>whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth</td>
+<td>Forms the second half of the class name of the grid widths</td>
+</tr>
+<tr>
+<td>$grid--width-expression</td>
+<td>boolean</td>
+<td>false</td>
+<td>Changes the width in the grid widths to use expressions. Set to true for IE7 and below.</td>
+</tr>
+</tbody>
+</table>
+</div></div></div><footer class="main-footer"><div class="centering footer-content"><small>© 2014 Clock Ltd.</small></div></footer></div><div class="mobile-sidebar"><div class="h1 site-title"><a href="/">Dev Guides</a></div><nav class="main-navigation"><ul class="nav-list"><li class="section-html"><a href="/responsive-grid" class="active">Introduction</a></li><li class="section-css has-subnav"><a href="/responsive-grid/usage/basic">Usage</a><ul class="subnav"><li><a href="/responsive-grid/usage/basic">Basic</a></li><li><a href="/responsive-grid/usage/modifiers">Modifiers</a></li><li><a href="/responsive-grid/usage/push-pull">Push & Pull</a></li><li><a href="/responsive-grid/usage/reverse">Reverse</a></li></ul></li></ul></nav></div><script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script><script src="/responsive-grid/static/js/lib/prism.js"></script><script src="/responsive-grid/static/js/lib/hide-address-bar.js"></script><script src="/responsive-grid/static/js/global.js"></script></body>

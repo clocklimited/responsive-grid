@@ -4,4 +4,365 @@ block content
 
   .section
     .centering
-      | Basic
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-whole
+                |     .text .grid__item.one-whole
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 1)
+      h3 Example
+      .grid
+        .grid__item.one-whole
+          .text .grid__item.one-whole
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-half
+                |     .text .grid__item.one-half
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 2)
+      h3 Example
+      .grid
+        .grid__item.one-half
+          .text .grid__item.one-half
+        .grid__item.one-half
+          .text .grid__item.one-half
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-third
+                |     .text .grid__item.one-half
+                |   .grid__item.two-thirds
+                |     .text .grid__item.two-thirds
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 3)
+      h3 Example
+      .grid
+        .grid__item.one-third
+          .text .grid__item.one-third
+        .grid__item.two-thirds
+          .text .grid__item.two-thirds
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-quarter
+                |     .text .grid__item.one-quarter
+                |   .grid__item.three-quarters
+                |     .text .grid__item.three-quarters
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 4)
+      h3 Example
+      .grid
+        .grid__item.one-quarter
+          .text .grid__item.one-quarter
+        .grid__item.three-quarters
+          .text .grid__item.three-quarters
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-fifth
+                |     .text .grid__item.one-fifth
+                |   .grid__item.four-fifths
+                |     .text .grid__item.four-fifths
+                |   .grid__item.two-fifths
+                |     .text .grid__item.two-fifths
+                |   .grid__item.three-fifths
+                |     .text .grid__item.three-fifths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 5)
+      h3 Example
+      .grid
+        .grid__item.one-fifth
+          .text .grid__item.one-fifth
+        .grid__item.four-fifths
+          .text .grid__item.four-fifths
+        .grid__item.two-fifths
+          .text .grid__item.two-fifths
+        .grid__item.three-fifths
+          .text .grid__item.three-fifths
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-sixth
+                |     .text .grid__item.one-sixth
+                |   .grid__item.five-sixths
+                |     .text .grid__item.five-sixths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 6)
+      h3 Example
+      .grid
+        .grid__item.one-sixth
+          .text .grid__item.one-sixth
+        .grid__item.five-sixths
+          .text .grid__item.five-sixths
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-seventh
+                |     .text .grid__item.one-seventh
+                |   .grid__item.six-sevenths
+                |     .text .grid__item.six-sevenths
+                |   .grid__item.two-sevenths
+                |     .text .grid__item.two-sevenths
+                |   .grid__item.five-sevenths
+                |     .text .grid__item.five-sevenths
+                |   .grid__item.three-sevenths
+                |     .text .grid__item.three-sevenths
+                |   .grid__item.four-sevenths
+                |     .text .grid__item.four-sevenths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 7)
+      h3 Example
+      .grid
+        .grid__item.one-seventh
+          .text .grid__item.one-seventh
+        .grid__item.six-sevenths
+          .text .grid__item.six-sevenths
+        .grid__item.two-sevenths
+          .text .grid__item.two-sevenths
+        .grid__item.five-sevenths
+          .text .grid__item.five-sevenths
+        .grid__item.three-sevenths
+          .text .grid__item.three-sevenths
+        .grid__item.four-sevenths
+          .text .grid__item.four-sevenths
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-eighth
+                |     .text .grid__item.one-eighth
+                |   .grid__item.seven-eighths
+                |     .text .grid__item.seven-eighths
+                |   .grid__item.three-eighths
+                |     .text .grid__item.three-eighths
+                |   .grid__item.five-eighths
+                |     .text .grid__item.five-eighths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 8)
+      h3 Example
+      .grid
+        .grid__item.one-eighth
+          .text .grid__item.one-eighth
+        .grid__item.seven-eighths
+          .text .grid__item.seven-eighths
+        .grid__item.three-eighths
+          .text .grid__item.three-eighths
+        .grid__item.five-eighths
+          .text .grid__item.five-eighths
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-tenth
+                |     .text .grid__item.one-tenth
+                |   .grid__item.nine-tenths
+                |     .text .grid__item.nine-tenths
+                |   .grid__item.three-tenths
+                |     .text .grid__item.three-tenths
+                |   .grid__item.seven-tenths
+                |     .text .grid__item.seven-tenths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 10)
+      h3 Example
+      .grid
+        .grid__item.one-tenth
+          .text .grid__item.one-tenth
+        .grid__item.nine-tenths
+          .text .grid__item.nine-tenths
+        .grid__item.three-tenths
+          .text .grid__item.three-tenths
+        .grid__item.seven-tenths
+          .text .grid__item.seven-tenths
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-twelfth
+                |     .text .grid__item.one-twelfth
+                |   .grid__item.eleven-twelfths
+                |     .text .grid__item.eleven-twelfths
+                |   .grid__item.five-twelfths
+                |     .text .grid__item.five-twelfths
+                |   .grid__item.seven-twelfths
+                |     .text .grid__item.seven-twelfths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 12)
+      h3 Example
+      .grid
+        .grid__item.one-twelfth
+          .text .grid__item.one-twelfth
+        .grid__item.eleven-twelfths
+          .text .grid__item.eleven-twelfths
+        .grid__item.five-twelfths
+          .text .grid__item.five-twelfths
+        .grid__item.seven-twelfths
+          .text .grid__item.seven-twelfths
+
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid
+                |   .grid__item.one-sixteenth
+                |     .text .grid__item.one-sixteenth
+                |   .grid__item.fifteen-sixteenths
+                |     .text .grid__item.fifteen-sixteenths
+                |   .grid__item.three-sixteenths
+                |     .text .grid__item.three-sixteenths
+                |   .grid__item.thirteen-sixteenths
+                |     .text .grid__item.thirteen-sixteenths
+                |   .grid__item.five-sixteenths
+                |     .text .grid__item.five-sixteenths
+                |   .grid__item.eleven-sixteenths
+                |     .text .grid__item.eleven-sixteenths
+                |   .grid__item.seven-sixteenths
+                |     .text .grid__item.seven-sixteenths
+                |   .grid__item.nine-sixteenths
+                |     .text .grid__item.nine-sixteenths
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 16)
+      h3 Example
+      .grid
+        .grid__item.one-sixteenth
+          .text .grid__item.one-sixteenth
+        .grid__item.fifteen-sixteenths
+          .text .grid__item.fifteen-sixteenths
+        .grid__item.three-sixteenths
+          .text .grid__item.three-sixteenths
+        .grid__item.thirteen-sixteenths
+          .text .grid__item.thirteen-sixteenths
+        .grid__item.five-sixteenths
+          .text .grid__item.five-sixteenths
+        .grid__item.eleven-sixteenths
+          .text .grid__item.eleven-sixteenths
+        .grid__item.seven-sixteenths
+          .text .grid__item.seven-sixteenths
+        .grid__item.nine-sixteenths
+          .text .grid__item.nine-sixteenths

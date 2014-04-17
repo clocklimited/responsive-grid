@@ -4,4 +4,31 @@ block content
 
   .section
     .centering
-      | Reverse
+      .grid
+        .grid__item.one-half
+          h3 Jade
+          .body
+            pre
+              code
+                | .grid.grid--reverse
+                |   .grid__item.one-half
+                |     .text Right
+                |   .grid__item.one-half
+                |     .text Left
+        .grid__item.one-half
+          h3 Stylus
+          .body
+            pre
+              code
+                | @include 'responsive-grid'
+                | 
+                | grid-base()
+                | grid-widths('', 1 2)
+                | grid-reverse()
+
+      h3 Example
+      .grid.grid--reverse
+        .grid__item.one-half
+          .text Right
+        .grid__item.one-half
+          .text Left

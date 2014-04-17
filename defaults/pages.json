@@ -2,7 +2,7 @@
   , "template": "index"
   , "data":
     { "bodyClass": "section"
-    , "title": "Responsive Grid"
+    , "title": "Introduction"
     , "section": "home"
     }
   }
@@ -17,6 +17,13 @@
   , "data":
     { "bodyClass": "section"
     , "title": "Modifiers Usage"
+    , "section": "usage"
+    }
+  }
+, { "template": "usage/push-pull"
+  , "data":
+    { "bodyClass": "section"
+    , "title": "Push and Pull Usage"
     , "section": "usage"
     }
   }
