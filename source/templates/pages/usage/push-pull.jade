@@ -4,56 +4,60 @@ block content
 
   .section
     .centering
+      h2 Pull
       .grid
         .grid__item.one-half
-          h3 Jade
+          h6 Jade
           .body
-            pre
-              code
+            pre.language-jade
+              code.language-jade
                 | .grid
                 |   .grid__item.one-third
                 |     .text .grid__item.one-third
                 |   .grid__item.pull-one-third.one-third
                 |     .text .grid__item.pull-one-third.one-third
         .grid__item.one-half
-          h3 Stylus
+          h6 Stylus
           .body
-            pre
-              code
+            pre.language-stylus
+              code.language-stylus
                 | @include 'responsive-grid'
                 | 
                 | grid-base()
                 | grid-widths('', 3)
                 | grid-pull('', 3)
-      h3 Example
+      h6 Example
       .grid
         .grid__item.one-third
           .text .grid__item.one-third
         .grid__item.pull-one-third.one-third
           .text .grid__item.pull-one-third.one-third
 
+  .section
+    .centering
+      h2 Push
       .grid
         .grid__item.one-half
-          h3 Jade
+          h6 Jade
           .body
-            pre
-              code
+            pre.language-jade
+              code.language-jade
                 | .grid
                 |   .grid__item.one-third
                 |     .text .grid__item.one-third
                 |   .grid__item.push-one-third.one-third
                 |     .text .grid__item.push-one-third.one-third
         .grid__item.one-half
-          h3 Stylus
+          h6 Stylus
           .body
-            pre
-              code
+            pre.language-stylus
+              code.language-stylus
                 | @include 'responsive-grid'
                 | 
                 | grid-base()
                 | grid-widths('', 3)
                 | grid-push('', 3)
-      h3 Example
+      h6 Example
       .grid
         .grid__item.one-third
           .text .grid__item.one-third

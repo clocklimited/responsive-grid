@@ -4,29 +4,30 @@ block content
 
   .section
     .centering
+      h2 Reverse
       .grid
         .grid__item.one-half
-          h3 Jade
+          h6 Jade
           .body
-            pre
-              code
+            pre.language-jade
+              code.language-jade
                 | .grid.grid--reversed
                 |   .grid__item.one-half
                 |     .text Right
                 |   .grid__item.one-half
                 |     .text Left
         .grid__item.one-half
-          h3 Stylus
+          h6 Stylus
           .body
-            pre
-              code
+            pre.language-stylus
+              code.language-stylus
                 | @include 'responsive-grid'
                 | 
                 | grid-base()
                 | grid-widths('', 1 2)
                 | grid-reverse()
 
-      h3 Example
+      h6 Example
       .grid.grid--reversed
         .grid__item.one-half
           .text Right

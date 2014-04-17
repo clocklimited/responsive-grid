@@ -4,84 +4,93 @@ block content
 
   .section
     .centering
+      h2 Pixel
       .grid
         .grid__item.one-half
-          h3 Jade
+          h6 Jade
           .body
-            pre
-              code
+            pre.language-jade
+              code.language-jade
                 | .grid.grid--ten-pixel
                 |   .grid__item.one-third
                 |     .text .grid__item.one-third
                 |   .grid__item.two-thirds
                 |     .text .grid__item.two-thirds
         .grid__item.one-half
-          h3 Stylus
+          h6 Stylus
           .body
-            pre
-              code
+            pre.language-stylus
+              code.language-stylus
                 | @include 'responsive-grid'
                 | 
                 | grid-base()
                 | grid-widths('', 1 2 3)
                 | grid-modifier('ten-pixel', 10px)
-      h3 Example
+      h6 Example
       .grid.grid--ten-pixel
         .grid__item.one-third
           .text .grid__item.one-third
         .grid__item.two-thirds
           .text .grid__item.two-thirds
 
+
+  .section
+    .centering
+      h2 Percentage
       .grid
         .grid__item.one-half
-          h3 Jade
+          h6 Jade
           .body
-            pre
-              code
+            pre.language-jade
+              code.language-jade
                 | .grid.grid--ten-percentage
                 |   .grid__item.one-half
                 |     .text .grid__item.one-half
                 |   .grid__item.one-half
                 |     .text .grid__item.one-half
         .grid__item.one-half
-          h3 Stylus
+          h6 Stylus
           .body
-            pre
-              code
+            pre.language-stylus
+              code.language-stylus
                 | @include 'responsive-grid'
                 | 
                 | grid-base()
                 | grid-widths('', 1 2)
                 | grid-modifier('ten-percentage', 10%)
-      h3 Example
+      h6 Example
       .grid.grid--ten-percentage
         .grid__item.one-half
           .text .grid__item.one-half
         .grid__item.one-half
           .text .grid__item.one-half
 
+
+  .section
+    .centering
+      h2 EM
       .grid
         .grid__item.one-half
-          h3 Jade
+          h6 Jade
           .body
-            pre
-              code
+            pre.language-jade
+              code.language-jade
                 | .grid.grid--ten-em
                 |   .grid__item.one-half
                 |     .text .grid__item.one-half
                 |   .grid__item.one-half
                 |     .text .grid__item.one-half
         .grid__item.one-half
-          h3 Stylus
+          h6 Stylus
           .body
-            pre
-              code
+            pre.language-stylus
+              code.language-stylus
                 | @include 'responsive-grid'
                 | 
                 | grid-base()
                 | grid-widths('', 1 2)
                 | grid-modifier('ten-em', 10em)
-      h3 Example
+      h6 Example
       .grid.grid--ten-em
         .grid__item.one-half
           .text .grid__item.one-half
