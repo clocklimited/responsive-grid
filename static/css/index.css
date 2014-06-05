@@ -570,19 +570,19 @@ sub {
   position: relative;
 }
 .push-one-third {
-  right: 33.333333333333336%;
+  left: 33.333333333333336%;
 }
 .push-two-thirds {
-  right: 66.66666666666667%;
+  left: 66.66666666666667%;
 }
 [class*=pull-] {
   position: relative;
 }
 .pull-one-third {
-  left: 33.333333333333336%;
+  right: 33.333333333333336%;
 }
 .pull-two-thirds {
-  left: 66.66666666666667%;
+  right: 66.66666666666667%;
 }
 .grid--ten-pixel {
   margin-left: -10px;

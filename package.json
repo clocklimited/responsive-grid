@@ -15,7 +15,7 @@
     "stylus": "~0.42.0",
     "stylus-renderer": "~1.1.0",
     "stylus-mixins": "~0.1.0",
-    "responsive-grid": "~0.0.3",
+    "responsive-grid": "~0.0.6",
     "autoprefixer-stylus": "0.0.4",
     "marked": "~0.2.8",
     "async": "~0.2.10",
