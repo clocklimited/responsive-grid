@@ -120,7 +120,7 @@ _grid($namespace, $columns, $property)
     $numCols = $column is 1 ? 1 : $column - 1
     for $j in (1..$numCols)
       $plural = $j is 1 ? '' : 's'
-      $width = $j * (100 / $column)
+      $width = round($j * (100 / $column), 4)
       .{$namespace}{$grid--count-names[$j - 1]}-{$grid}{$plural}
         {$property} !$grid--width-expression ? ($width)% : _grid-width--expression($width)
 
