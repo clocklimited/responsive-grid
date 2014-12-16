@@ -61,8 +61,10 @@ grid-modifier($modifier, $grid-modifier--gutter)
 // Reverses the rendered layout of the `grid__item`s
 //
 
-grid-reverse()
-  .grid--reversed
+grid-reverse($namespace = '')
+  $namespace = _namespace-suffix($namespace)
+
+  .grid--{$namespace}reverse
     direction rtl
     text-align right
 
@@ -77,6 +79,8 @@ grid-reverse()
 //
 
 grid-widths($namespace, $columns)
+  $namespace = _namespace-suffix($namespace)
+
   _grid($namespace, $columns, 'width')
 
 
@@ -86,7 +90,7 @@ grid-widths($namespace, $columns)
 //
 
 grid-pull($namespace, $columns)
-  $namespace = $namespace + 'pull-'
+  $namespace = _namespace-suffix($namespace, 'pull-')
 
   [class*={$namespace}]
     position relative
@@ -100,7 +104,7 @@ grid-pull($namespace, $columns)
 //
 
 grid-push($namespace, $columns)
-  $namespace = $namespace + 'push-'
+  $namespace = _namespace-suffix($namespace, 'push-')
 
   [class*={$namespace}]
     position relative
@@ -120,7 +124,7 @@ _grid($namespace, $columns, $property)
     $numCols = $column is 1 ? 1 : $column - 1
     for $j in (1..$numCols)
       $plural = $j is 1 ? '' : 's'
-      $width = $j * (100 / $column)
+      $width = round($j * (100 / $column), 4)
       .{$namespace}{$grid--count-names[$j - 1]}-{$grid}{$plural}
         {$property} !$grid--width-expression ? ($width)% : _grid-width--expression($width)
 
@@ -133,3 +137,8 @@ _grid-gutter--item($g)
 
 _grid-width--expression($width)
   unquote('expression((this.parentNode.clientWidth * '+($width / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")')
+
+_namespace-suffix($namespace, $suffix = '')
+  if $namespace != ''
+    $namespace = $namespace + '-'
+  $namespace = $namespace + $suffix
