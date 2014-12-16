@@ -133,7 +133,7 @@ grid-reverse()
 }
 
 // @it output styles to visually reverse grid item order, prefixed with modifiers
-grid-reverse('desktop-')
+grid-reverse('desktop')
 
 // @expect
 .grid--desktop-reverse {
@@ -274,7 +274,7 @@ grid-widths('', 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16)
 .fifteen-sixteenths{width:93.75%}
 
 // @it output grid widths, prefixed with modifiers
-grid-widths('desktop-', 1)
+grid-widths('desktop', 1)
 
 // @expect
 .desktop-one-whole {
@@ -331,7 +331,7 @@ grid-pull('', 1 2)
 }
 
 // @it output grid widths, prefixed with modifiers
-grid-pull('desktop-', 1)
+grid-pull('desktop', 1)
 
 // @expect
 [class*='desktop-pull-'] {
@@ -382,7 +382,7 @@ grid-push('', 1 2)
 }
 
 // @it output grid widths, prefixed with modifiers
-grid-push('desktop-', 1)
+grid-push('desktop', 1)
 
 // @expect
 [class*='desktop-push-'] {
