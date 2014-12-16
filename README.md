@@ -91,9 +91,9 @@ This will set up the modifier `.grid--{$namespace}` class and `.grid__item` chil
 
 ---
 
-### `grid-reverse()`
+### `grid-reverse($namespace)`
 
-This will set up modifier `.grid--reversed` class that, when applied, will visual reverse the DOM order of the `.grid__item`'s.
+This will set up modifier `.grid--reverse` class that, when applied, will visual reverse the DOM order of the `.grid__item`'s. Providing a `$namespace` is optional.
 
 ---
 

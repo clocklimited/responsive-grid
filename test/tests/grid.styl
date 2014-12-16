@@ -123,11 +123,24 @@ grid-modifier('bar', 10%)
 grid-reverse()
 
 // @expect
-.grid--reversed {
+.grid--reverse {
   direction: rtl;
   text-align: right;
 }
-.grid--reversed > .grid__item {
+.grid--reverse > .grid__item {
+  direction: ltr;
+  text-align: left;
+}
+
+// @it output styles to visually reverse grid item order, prefixed with modifiers
+grid-reverse('desktop-')
+
+// @expect
+.grid--desktop-reverse {
+  direction: rtl;
+  text-align: right;
+}
+.grid--desktop-reverse > .grid__item {
   direction: ltr;
   text-align: left;
 }

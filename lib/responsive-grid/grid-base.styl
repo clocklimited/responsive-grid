@@ -61,8 +61,8 @@ grid-modifier($modifier, $grid-modifier--gutter)
 // Reverses the rendered layout of the `grid__item`s
 //
 
-grid-reverse()
-  .grid--reversed
+grid-reverse($namespace = '')
+  .grid--{$namespace}reverse
     direction rtl
     text-align right
 
