@@ -45,11 +45,12 @@ grid-base()
 
 
 //
-// GRID MODIFIERS
+// GRID GUTTER MODIFIER
+// Custom gutter widths
 //
 
-grid-modifier($modifier, $grid-modifier--gutter)
-  .grid--{$modifier}
+grid-gutter-modifier($namespace, $grid-modifier--gutter)
+  .grid--{$namespace}
     margin-left -($grid-modifier--gutter)
 
     & > .grid__item

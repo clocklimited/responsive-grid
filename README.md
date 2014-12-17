@@ -79,15 +79,15 @@ This will set up push classes based on the `$columns` you include.
 
 ---
 
-### `grid-modifier($namespace, $gutter)`
+### `grid-gutter-modifier($namespace, $gutter)`
 
-This will set up the modifier `.grid--{$namespace}` class and `.grid__item` children elements which modify the gutter length.
+This will set up the gutter modifier `.grid--{$namespace}` class and `.grid__item` children elements which modify the gutter width.
 
 #### Examples
 
-* `grid-modified('em', 1em)` will set up a `.grid--{$namespace}` class that will provided 1em gutter between each `.grid__item`.
-* `grid-modified('percent', 10%)` will set up a `.grid--{$namespace}` class that will provided 10% gutter between each `.grid__item`.
-* `grid-modified('pixel', 20px)` will set up a `.grid--{$namespace}` class that will provided 20px gutter between each `.grid__item`.
+* `grid-gutter-modifier('em', 1em)` will set up a `.grid--{$namespace}` class that will provided 1em gutter between each `.grid__item`.
+* `grid-gutter-modifier('percent', 10%)` will set up a `.grid--{$namespace}` class that will provided 10% gutter between each `.grid__item`.
+* `grid-gutter-modifier('pixel', 20px)` will set up a `.grid--{$namespace}` class that will provided 20px gutter between each `.grid__item`.
 
 ---
 
