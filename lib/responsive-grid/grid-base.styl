@@ -63,9 +63,9 @@ grid-gutter-modifier($namespace, $grid-modifier--gutter)
 //
 
 grid-reverse($namespace = '')
-  $namespace = _namespace-suffix($namespace)
+  $namespace = _namespace-suffix($namespace, 'reverse')
 
-  .grid--{$namespace}reverse
+  .grid--{$namespace}
     direction rtl
     text-align right
 
