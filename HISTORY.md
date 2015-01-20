@@ -1,5 +1,5 @@
-1.0.0 - / 2015-01-20
-====================
+1.0.0 / 2015-01-20
+==================
 
   * Renamed `grid-modifier` mixin to `grid-gutter-modifier`
   * Appended hyphens automatically to namespaces
