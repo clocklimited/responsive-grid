@@ -102,7 +102,7 @@ Below lists the settings available to the grid system (bold denotes a required v
 
 Variable name           | Type    | Default | Description
 ----------------------- | ------- | ------- | -----------
-$grid--html-compressed  | boolean | false   | If HTML is compressed, the whitespace hack used will be redundant.
+$grid--html-compressed  | boolean | true    | If HTML is compressed, the whitespace hack used will be redundant.
 $grid--gutter           | unit    | 20px    | Can be any the following unit types: **em**, **%**, **px**
 $grid--count-names      | array   | one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen | Forms the first half of the class name of the grid widths
 $grid--fraction-names   | array | whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth | Forms the second half of the class name of the grid widths
