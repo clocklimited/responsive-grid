@@ -107,3 +107,8 @@ $grid--gutter           | unit    | 20px    | Can be any the following unit type
 $grid--count-names      | array   | one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen | Forms the first half of the class name of the grid widths
 $grid--fraction-names   | array | whole half third quarter fifth sixth seventh eighth ninth tenth eleventh twelfth thirteenth fourteenth fifteenth sixteenth | Forms the second half of the class name of the grid widths
 $grid--width-expression | boolean | false   | Changes the width in the grid widths to use expressions. Set to true for IE7 and below.
+
+---
+
+## Licence
+Licensed under the [New BSD License](http://opensource.org/licenses/bsd-license.php)
