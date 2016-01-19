@@ -49,8 +49,13 @@ grid-base()
 // Custom gutter widths
 //
 
-grid-gutter-modifier($namespace, $grid-modifier--gutter)
-  .grid--{$namespace}
+grid-gutter-modifier($namespace = '', $grid-modifier--gutter)
+  if $namespace == ''
+    $namespace = 'grid'
+  else
+    $namespace = 'grid--' + $namespace
+
+  .{$namespace}
     margin-left -($grid-modifier--gutter)
 
     & > .grid__item

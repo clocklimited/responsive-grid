@@ -117,6 +117,17 @@ grid-gutter-modifier('bar', 10%)
   padding-left: 9.09090909090909%;
 }
 
+// @it output a grid gutter modifier without specifing a namespace
+grid-gutter-modifier('', 10px)
+
+// @expect
+.grid {
+  margin-left: -10px;
+}
+.grid > .grid__item {
+  padding-left: 10px;
+}
+
 // @describe grid-reverse()
 
 // @it output styles to visually reverse grid item order
