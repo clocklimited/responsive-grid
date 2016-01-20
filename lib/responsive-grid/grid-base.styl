@@ -50,12 +50,10 @@ grid-base()
 //
 
 grid-gutter-modifier($namespace = '', $grid-modifier--gutter)
-  if $namespace == ''
-    $namespace = 'grid'
-  else
-    $namespace = 'grid--' + $namespace
+  if $namespace != ''
+    $namespace = '--' + $namespace
 
-  .{$namespace}
+  .grid{$namespace}
     margin-left -($grid-modifier--gutter)
 
     & > .grid__item
