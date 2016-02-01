@@ -1,3 +1,8 @@
+1.1.0 / 2016-02-01
+==================
+
+  * Adds ability to omit namespace for `grid-gutter-modifier`
+
 1.0.0 / 2015-01-20
 ==================
 
