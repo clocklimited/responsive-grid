@@ -114,35 +114,3 @@ grid-push($namespace, $columns)
     position relative
 
   _grid($namespace, $columns, 'left')
-
-
-//
-// INTERNAL MIXINS
-// These mixins should not be called directly,
-// instead are used as helpers within other mixins
-//
-
-_grid($namespace, $columns, $property)
-  for $column, $i in $columns
-    $grid = $grid--fraction-names[$column - 1]
-    $numCols = $column is 1 ? 1 : $column - 1
-    for $j in (1..$numCols)
-      $plural = $j is 1 ? '' : 's'
-      $width = round($j * (100 / $column), 4)
-      .{$namespace}{$grid--count-names[$j - 1]}-{$grid}{$plural}
-        {$property} !$grid--width-expression ? ($width)% : _grid-width--expression($width)
-
-_grid-gutter--item($g)
-  if unit($g) == '%'
-    $scale = unit( 100 / (100 + $g), '')
-    padding-left ($scale * $g)%
-  else
-    padding-left $g
-
-_grid-width--expression($width)
-  unquote('expression((this.parentNode.clientWidth * '+($width / 100)+' - parseInt(this.currentStyle["paddingLeft"]) - parseInt(this.currentStyle["paddingRight"]) - (parseInt(this.currentStyle["borderLeftWidth"]) || 0) - (parseInt(this.currentStyle["borderRightWidth"]) || 0) ) + "px")')
-
-_namespace-suffix($namespace, $suffix = '')
-  if $namespace != ''
-    $namespace = $namespace + '-'
-  $namespace = $namespace + $suffix
