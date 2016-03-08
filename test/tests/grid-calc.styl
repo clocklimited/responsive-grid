@@ -1,0 +1,22 @@
+// @describe grid-calc()
+
+// @it output width of a defined column span as px
+$grid--gutter = 20px
+$base--max-width = 1060px
+
+.foo
+  max-width grid-calc(4, 12)
+
+// @expect
+.foo {
+  max-width: 340px;
+}
+
+// @it output width of a defined column span as rem, with custom gutter and grid width
+.foo
+  max-width grid-calc(5, 10, 2rem, 80rem)
+
+// @expect
+.foo {
+  max-width: 39rem;
+}
