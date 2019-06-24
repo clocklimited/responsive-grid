@@ -1,4 +1,4 @@
-# Responsive Grid [![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid)
+# Responsive Grid [![Build Status](https://travis-ci.org/clocklimited/responsive-grid.svg?branch=master)](https://travis-ci.org/clocklimited/responsive-grid) [![Greenkeeper badge](https://badges.greenkeeper.io/clocklimited/responsive-grid.svg)](https://greenkeeper.io/)
 
 A Stylus Plugin that provides a simple grid system. It's fully responsive, with modifiers available that provide full browser support.
 
